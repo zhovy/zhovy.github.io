@@ -1,0 +1,614 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="https://zhovy.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="https://zhovy.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="https://zhovy.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Springboot,Java web" />
+
+
+<link rel="canonical" href="https://zhovy.github.io/passages/Springboot/">
+
+
+
+  <title>
+Springboot |
+🐯 = Hexo = subtitle</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Springboot
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2019-11-14 14:38:48">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2019-11-14T14:38:48+08:00">2019-11-14</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>6.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>6 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">🐯</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://zhovy.github.io/passages/Springboot/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/panda.jpg">
+    <meta itemprop="name" content="Zhouy">
+    <meta itemprop="description" content="subtitle, What's the point of living?">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="springboot入门"><a class="markdownIt-Anchor" href="#springboot入门">#</a> Springboot 入门</h1>
+<p>@SpringBootApplication 开启了 Spring 的组件扫描和 springboot 的自动配置功能，相当于将以下三个注解组合在了一起</p>
+<p>1、@Configuration：表名该类使用基于 Java 的配置，将此类作为配置类。</p>
+<p>2、@ComponentScan：启用注解扫描。</p>
+<p>3、@EnableAutoConfiguration：开启 springboot 的自动配置功能。</p>
+<h1 id="springboot的四种属性注入"><a class="markdownIt-Anchor" href="#springboot的四种属性注入">#</a> Springboot 的四种属性注入</h1>
+<ul>
+<li>@Configuration：声明一个类作为配置类，代替 xml 文件</li>
+<li>@Autowired</li>
+<li>@Bean：声明在方法上，将方法的返回值加入 Bean 容器，代替<bean>标签</li>
+<li>@Value：属性注入</li>
+<li>@Component 扫描该组件，注册 Bean</li>
+<li>@PropertySource：指定外部属性文件。在类上添加 @PropertySource (“classpath:/jdbc.properties”)</li>
+</ul>
+<h2 id="restcontroller-可以代替-controller-和-response"><a class="markdownIt-Anchor" href="#restcontroller-可以代替-controller-和-response">#</a> @RestController 可以代替 @Controller  和 @Response</h2>
+<h1 id="文件上传"><a class="markdownIt-Anchor" href="#文件上传">#</a> 文件上传</h1>
+<p>Spring boot 2.0.4 内嵌的 Tomcat 8.5 可以直接使用 StandardServletMuilpartResolver 而在 Springboot 提供的文件上传自动化配置类 MuilpartAutoCondiguration 中也是采用了 StandardServletMuilpartResolver</p>
+<p>另一种是 CommonsMultpartResolver</p>
+<h1 id="自定义error页面"><a class="markdownIt-Anchor" href="#自定义error页面">#</a> 自定义 error 页面</h1>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">implements</span> <span class="token class-name">ErrorViewResolver</span></pre></td></tr></table></figure><h1 id="aop"><a class="markdownIt-Anchor" href="#aop">#</a> AOP</h1>
+<ul>
+<li>Aspect: A modularization of a concern that cuts across multiple classes. Transaction management is a good example of a crosscutting concern in enterprise Java applications. In Spring AOP, aspects are implemented by using regular classes (the <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmcvZG9jcy81LjIuMi5SRUxFQVNFL3NwcmluZy1mcmFtZXdvcmstcmVmZXJlbmNlL2NvcmUuaHRtbCNhb3Atc2NoZW1h">schema-based approach</span>) or regular classes annotated with the  <code>@Aspect</code>  annotation (the <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmcvZG9jcy81LjIuMi5SRUxFQVNFL3NwcmluZy1mcmFtZXdvcmstcmVmZXJlbmNlL2NvcmUuaHRtbCNhb3AtYXRhc3BlY3Rq">@AspectJ style</span>).</li>
+<li>Join point: A point during the execution of a program, such as the execution of a method or the handling of an exception. In Spring AOP, a join point always represents a method execution.</li>
+<li>Advice: Action taken by an aspect at a particular join point. Different types of advice include “around”, “before” and “after” advice. (Advice types are discussed later.) Many AOP frameworks, including Spring, model an advice as an interceptor and maintain a chain of interceptors around the join point.</li>
+<li>Pointcut: A predicate that matches join points. Advice is associated with a pointcut expression and runs at any join point matched by the pointcut (for example, the execution of a method with a certain name). The concept of join points as matched by pointcut expressions is central to AOP, and Spring uses the AspectJ pointcut expression language by default.</li>
+<li>Introduction: Declaring additional methods or fields on behalf of a type. Spring AOP lets you introduce new interfaces (and a corresponding implementation) to any advised object. For example, you could use an introduction to make a bean implement an  <code>IsModified</code>  interface, to simplify caching. (An introduction is known as an inter-type declaration in the AspectJ community.)</li>
+<li>Target object: An object being advised by one or more aspects. Also referred to as the “advised object”. Since Spring AOP is implemented by using runtime proxies, this object is always a proxied object.</li>
+<li>AOP proxy: An object created by the AOP framework in order to implement the aspect contracts (advise method executions and so on). In the Spring Framework, an AOP proxy is a JDK dynamic proxy or a CGLIB proxy.</li>
+<li>Weaving: linking aspects with other application types or objects to create an advised object. This can be done at compile time (using the AspectJ compiler, for example), load time, or at runtime. Spring AOP, like other pure Java AOP frameworks, performs weaving at runtime.</li>
+</ul>
+<p>Spring AOP includes the following types of advice:</p>
+<ul>
+<li>Before advice: Advice that runs before a join point but that does not have the ability to prevent execution flow proceeding to the join point (unless it throws an exception).</li>
+<li>After returning advice: Advice to be run after a join point completes normally (for example, if a method returns without throwing an exception).</li>
+<li>After throwing advice: Advice to be executed if a method exits by throwing an exception.</li>
+<li>After (finally) advice: Advice to be executed regardless of the means by which a join point exits (normal or exceptional return).</li>
+<li>Around advice: Advice that surrounds a join point such as a method invocation. This is the most powerful kind of advice. Around advice can perform custom behavior before and after the method invocation. It is also responsible for choosing whether to proceed to the join point or to shortcut the advised method execution by returning its own return value or throwing an exception</li>
+</ul>
+<h1 id="mapper文件的使用"><a class="markdownIt-Anchor" href="#mapper文件的使用">#</a> Mapper 文件的使用</h1>
+<h3 id="映射文件的顶级元素"><a class="markdownIt-Anchor" href="#映射文件的顶级元素">#</a> 映射文件的顶级元素</h3>
+<ul>
+<li>**select：** 映射查询语句</li>
+<li>**insert：** 映射插入语句</li>
+<li>**update：** 映射更新语句</li>
+<li>**delete：** 映射删除语句</li>
+<li>**sql：** 可以重用的 sql 代码块</li>
+<li>**resultMap：** 最复杂，最有力量的元素，用来描述如何从数据库结果集中加载你的对象</li>
+<li>cache：配置给定命名空间的缓存</li>
+<li>cache-ref：从其他命名空间引用缓存配置</li>
+</ul>
+<h3 id="命名空间"><a class="markdownIt-Anchor" href="#命名空间">#</a> 命名空间</h3>
+<figure class="highlight xml"><figcaption data-lang="XML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">namespace</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.hhh.mapper.BookMapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mapper</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><p>在 Java 代码中引用某个 sql 映射时，使用的亦是含有名称空间的全路径。如：</p>
+<figure class="highlight xml"><figcaption data-lang="XML"></figcaption><table><tr><td data-num="1"></td><td><pre>session.update("com.hhh.mapper.BookMapper.updateBookById",book)</pre></td></tr></table></figure><h3 id="select-标签的属性信息"><a class="markdownIt-Anchor" href="#select-标签的属性信息">#</a> Select 标签的属性信息</h3>
+<figure class="highlight xml"><figcaption data-lang="XML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span></pre></td></tr><tr><td data-num="2"></td><td><pre>　　<span class="token attr-name">&lt;!--</span> </pre></td></tr><tr><td data-num="3"></td><td><pre>　　　　<span class="token attr-name">1.</span> <span class="token attr-name">id（必须配置）</span></pre></td></tr><tr><td data-num="4"></td><td><pre>　　　　<span class="token attr-name">id是命名空间中的唯一标识符，可被用来代表这条语句</span></pre></td></tr><tr><td data-num="5"></td><td><pre>　　　　<span class="token attr-name">一个命名空间（namespace）对应一个dao接口</span></pre></td></tr><tr><td data-num="6"></td><td><pre>　　　　<span class="token attr-name">这个id也应该对应dao里面的某个方法（sql相当于方法的实现），因此id应该与方法名一致</span></pre></td></tr><tr><td data-num="7"></td><td><pre>　　 <span class="token attr-name">--</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="8"></td><td><pre>　　id="selectUser"</pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="11"></td><td><pre>　　　　2. parapeterType（可选配置，默认由 mybatis 自动选择处理）</pre></td></tr><tr><td data-num="12"></td><td><pre>　　　　将要传入语句的参数的完全限定名或别名，如果不配置，mybatis 会通过 ParamterHandler 根据参数类型默认选择合适的 typeHandler 进行处理</pre></td></tr><tr><td data-num="13"></td><td><pre>　　　　paramterType 主要指定参数类型，可以是 int, short, long, string 等类型，也可以是复杂类型（如对象）</pre></td></tr><tr><td data-num="14"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="15"></td><td><pre>　　parapeterType="int"</pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="18"></td><td><pre>　　　　3. resultType（resultType 与 resultMap 二选一配置）</pre></td></tr><tr><td data-num="19"></td><td><pre>　　　　用来指定返回类型，指定的类型可以是基本类型，也可以是 java 容器，也可以是 javabean</pre></td></tr><tr><td data-num="20"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="21"></td><td><pre>　　resultType="hashmap"</pre></td></tr><tr><td data-num="22"></td><td><pre>　　</pre></td></tr><tr><td data-num="23"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="24"></td><td><pre>　　　　4. resultMap（resultType 与 resultMap 二选一配置）</pre></td></tr><tr><td data-num="25"></td><td><pre>　　　　用于引用我们通过 resultMap 标签定义的映射类型，这也是 mybatis 组件高级复杂映射的关键</pre></td></tr><tr><td data-num="26"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="27"></td><td><pre>　　resultMap="USER_RESULT_MAP"</pre></td></tr><tr><td data-num="28"></td><td><pre>　　</pre></td></tr><tr><td data-num="29"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="30"></td><td><pre>　　　　5. flushCache（可选配置）</pre></td></tr><tr><td data-num="31"></td><td><pre>　　　　将其设置为 true，任何时候语句被调用，都会导致本地缓存和二级缓存被清空，默认值：false</pre></td></tr><tr><td data-num="32"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="33"></td><td><pre>　　flushCache="false"</pre></td></tr><tr><td data-num="34"></td><td><pre></pre></td></tr><tr><td data-num="35"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="36"></td><td><pre>　　　　6. useCache（可选配置）</pre></td></tr><tr><td data-num="37"></td><td><pre>　　　　将其设置为 true，会导致本条语句的结果被二级缓存，默认值：对 select 元素为 true</pre></td></tr><tr><td data-num="38"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="39"></td><td><pre>　　useCache="true"</pre></td></tr><tr><td data-num="40"></td><td><pre></pre></td></tr><tr><td data-num="41"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="42"></td><td><pre>　　　　7. timeout（可选配置）</pre></td></tr><tr><td data-num="43"></td><td><pre>　　　　这个设置是在抛出异常之前，驱动程序等待数据库返回请求结果的秒数，默认值为：unset（依赖驱动）</pre></td></tr><tr><td data-num="44"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="45"></td><td><pre>　　timeout="10000"</pre></td></tr><tr><td data-num="46"></td><td><pre></pre></td></tr><tr><td data-num="47"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="48"></td><td><pre>　　　　8. fetchSize（可选配置）</pre></td></tr><tr><td data-num="49"></td><td><pre>　　　　这是尝试影响驱动程序每次批量返回的结果行数和这个设置值相等。默认值为：unset（依赖驱动）</pre></td></tr><tr><td data-num="50"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="51"></td><td><pre>　　fetchSize="256"</pre></td></tr><tr><td data-num="52"></td><td><pre></pre></td></tr><tr><td data-num="53"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="54"></td><td><pre>　　　　9. statementType（可选配置）</pre></td></tr><tr><td data-num="55"></td><td><pre>　　　　STATEMENT, PREPARED 或 CALLABLE 的一种，这会让 MyBatis 使用选择 Statement, PrearedStatement 或 CallableStatement，默认值：PREPARED</pre></td></tr><tr><td data-num="56"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="57"></td><td><pre>　　statementType="PREPARED"</pre></td></tr><tr><td data-num="58"></td><td><pre></pre></td></tr><tr><td data-num="59"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="60"></td><td><pre>　　　　10. resultSetType（可选配置）</pre></td></tr><tr><td data-num="61"></td><td><pre>　　　　FORWARD_ONLY，SCROLL_SENSITIVE 或 SCROLL_INSENSITIVE 中的一个，默认值为：unset（依赖驱动）</pre></td></tr><tr><td data-num="62"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="63"></td><td><pre>　　resultSetType="FORWORD_ONLY"</pre></td></tr><tr><td data-num="64"></td><td><pre>><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><h3 id="resultmap标签的属性信息"><a class="markdownIt-Anchor" href="#resultmap标签的属性信息">#</a> resultMap 标签的属性信息</h3>
+<figure class="highlight xml"><figcaption data-lang="XML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="2"></td><td><pre>　　1. type 对应的返回类型，可以是 javabean, 也可以是其它</pre></td></tr><tr><td data-num="3"></td><td><pre>　　2. id 必须唯一， 用于标示这个 resultMap 的唯一性，在使用 resultMap 的时候，就是通过 id 引用</pre></td></tr><tr><td data-num="4"></td><td><pre>　　3. extends 继承其他 resultMap 标签</pre></td></tr><tr><td data-num="5"></td><td><pre> --></span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resultMap</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">extends</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>　　</pre></td></tr><tr><td data-num="7"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="8"></td><td><pre>　　　　1. id 唯一性，注意啦，这个 id 用于标示这个 javabean 对象的唯一性， 不一定会是数据库的主键（不要把它理解为数据库对应表的主键）</pre></td></tr><tr><td data-num="9"></td><td><pre>　　　　2. property 属性对应 javabean 的属性名</pre></td></tr><tr><td data-num="10"></td><td><pre>　　　　3. column 对应数据库表的列名</pre></td></tr><tr><td data-num="11"></td><td><pre>       （这样，当 javabean 的属性与数据库对应表的列名不一致的时候，就能通过指定这个保持正常映射了）</pre></td></tr><tr><td data-num="12"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="13"></td><td><pre>　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">column</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="14"></td><td><pre>        </pre></td></tr><tr><td data-num="15"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="16"></td><td><pre>　　　　result 与 id 相比，对应普通属性</pre></td></tr><tr><td data-num="17"></td><td><pre>　　 --></span>    </pre></td></tr><tr><td data-num="18"></td><td><pre>　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>result</span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">column</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="19"></td><td><pre>        </pre></td></tr><tr><td data-num="20"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="21"></td><td><pre>　　　　constructor 对应 javabean 中的构造方法</pre></td></tr><tr><td data-num="22"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="23"></td><td><pre>　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="24"></td><td><pre>　　　　<span class="token comment">&lt;!-- idArg 对应构造方法中的 id 参数 --></span></pre></td></tr><tr><td data-num="25"></td><td><pre>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>idArg</span> <span class="token attr-name">column</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="26"></td><td><pre>       <span class="token comment">&lt;!-- arg 对应构造方法中的普通参数 --></span></pre></td></tr><tr><td data-num="27"></td><td><pre>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arg</span> <span class="token attr-name">column</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="28"></td><td><pre>   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="29"></td><td><pre>   </pre></td></tr><tr><td data-num="30"></td><td><pre>   <span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="31"></td><td><pre>　　　　collection 为关联关系，是实现一对多的关键 </pre></td></tr><tr><td data-num="32"></td><td><pre>　　　　1. property 为 javabean 中容器对应字段名</pre></td></tr><tr><td data-num="33"></td><td><pre>　　　　2. ofType 指定集合中元素的对象类型</pre></td></tr><tr><td data-num="34"></td><td><pre>　　　　3. select 使用另一个查询封装的结果</pre></td></tr><tr><td data-num="35"></td><td><pre>　　　　4. column 为数据库中的列名，与 select 配合使用</pre></td></tr><tr><td data-num="36"></td><td><pre>    --></span></pre></td></tr><tr><td data-num="37"></td><td><pre>　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>collection</span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">column</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">ofType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">select</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="38"></td><td><pre>　　　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="39"></td><td><pre>　　　　　　当使用 select 属性时，无需下面的配置</pre></td></tr><tr><td data-num="40"></td><td><pre>　　　　 --></span></pre></td></tr><tr><td data-num="41"></td><td><pre>　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">column</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="42"></td><td><pre>　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>result</span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">column</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="43"></td><td><pre>　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>collection</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="44"></td><td><pre>        </pre></td></tr><tr><td data-num="45"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="46"></td><td><pre>　　　　association 为关联关系，是实现一对一的关键</pre></td></tr><tr><td data-num="47"></td><td><pre>　　　　1. property 为 javabean 中容器对应字段名</pre></td></tr><tr><td data-num="48"></td><td><pre>　　　　2. javaType 指定关联的类型，当使用 select 属性时，无需指定关联的类型</pre></td></tr><tr><td data-num="49"></td><td><pre>　　　　3. select 使用另一个 select 查询封装的结果</pre></td></tr><tr><td data-num="50"></td><td><pre>　　　　4. column 为数据库中的列名，与 select 配合使用</pre></td></tr><tr><td data-num="51"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="52"></td><td><pre>　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>association</span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">column</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">javaType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">select</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="53"></td><td><pre>　　　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="54"></td><td><pre>　　　　　　使用 select 属性时，无需下面的配置</pre></td></tr><tr><td data-num="55"></td><td><pre>　　　　 --></span></pre></td></tr><tr><td data-num="56"></td><td><pre>　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">column</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="57"></td><td><pre>　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>result</span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">column</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="58"></td><td><pre>　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>association</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="59"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>resultMap</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><h3 id="insert标签的属性信息"><a class="markdownIt-Anchor" href="#insert标签的属性信息">#</a> insert 标签的属性信息</h3>
+<figure class="highlight xml"><figcaption data-lang="XML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>insert</span></pre></td></tr><tr><td data-num="2"></td><td><pre>　　<span class="token attr-name">&lt;!--</span></pre></td></tr><tr><td data-num="3"></td><td><pre>　　　　<span class="token attr-name">同</span> <span class="token attr-name">select</span> <span class="token attr-name">标签</span></pre></td></tr><tr><td data-num="4"></td><td><pre>　　 <span class="token attr-name">--</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="5"></td><td><pre>　　id="insertProject"</pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="8"></td><td><pre>　　　　同 select 标签</pre></td></tr><tr><td data-num="9"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="10"></td><td><pre>　　paramterType="projectInfo"</pre></td></tr><tr><td data-num="11"></td><td><pre>　　</pre></td></tr><tr><td data-num="12"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="13"></td><td><pre>　　　　1. useGeneratedKeys（可选配置，与 keyProperty 相配合）</pre></td></tr><tr><td data-num="14"></td><td><pre>　　　　设置为 true，并将 keyProperty 属性设为数据库主键对应的实体对象的属性名称</pre></td></tr><tr><td data-num="15"></td><td><pre>　　 --></span> </pre></td></tr><tr><td data-num="16"></td><td><pre>　　useGeneratedKeys="true"</pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre>　　<span class="token comment">&lt;!-- </pre></td></tr><tr><td data-num="19"></td><td><pre>　　　　2. keyProperty（可选配置，与 useGeneratedKeys 相配合）</pre></td></tr><tr><td data-num="20"></td><td><pre>　　　　用于获取数据库自动生成的主键</pre></td></tr><tr><td data-num="21"></td><td><pre>　　 --></span></pre></td></tr><tr><td data-num="22"></td><td><pre>　　keyProperty="projectId"</pre></td></tr><tr><td data-num="23"></td><td><pre>></pre></td></tr></table></figure><h3 id="重用sql标签"><a class="markdownIt-Anchor" href="#重用sql标签">#</a> 重用 sql 标签</h3>
+<figure class="highlight xml"><figcaption data-lang="XML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sql</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>userColumns<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>id,username,password<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sql</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><p>这个 sql 片段可以被包含在其他的 sql 语句中</p>
+<figure class="highlight xml"><figcaption data-lang="XML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>selectProjectList<span class="token punctuation">"</span></span> <span class="token attr-name">paramertType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>int<span class="token punctuation">"</span></span> <span class="token attr-name">resultType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hashmap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre>　　SELECT </pre></td></tr><tr><td data-num="3"></td><td><pre>    　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span> <span class="token attr-name">refid</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>userColumns<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="4"></td><td><pre>　　FROM </pre></td></tr><tr><td data-num="5"></td><td><pre>    　　t_project_002_project_info</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><h3 id="完全限定名使用别名代替"><a class="markdownIt-Anchor" href="#完全限定名使用别名代替">#</a> 完全限定名使用别名代替</h3>
+<figure class="highlight xml"><figcaption data-lang="XML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>typeAliases</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>typeAlias</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.enh.bean.ProjectInfo<span class="token punctuation">"</span></span> <span class="token attr-name">alias</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>projectInfo<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>typeAliases</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><h3 id=""><a class="markdownIt-Anchor" href="#">#</a> </h3>
+
+      <div class="tags">
+          <a href="/tags/Springboot/" rel="tag"><i class="ic i-tag"></i> Springboot</a>
+          <a href="/tags/Java-web/" rel="tag"><i class="ic i-tag"></i> Java web</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span id="passages/Springboot/" class="item leancloud_visitors" data-flag-title="Springboot" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Zhouy 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="Zhouy 宝贝不是paypal">
+        <p>宝贝不是paypal</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Zhouy 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Zhouy <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://zhovy.github.io/passages/Springboot/" title="Springboot">https://zhovy.github.io/passages/Springboot/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/passages/index/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeuv80yoj20zk0m8kjl.jpg" title="index">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>index</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/passages/RabbitMQ/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetlbztpj20zk0m84qp.jpg" title="2019-11-15 RabbitMQ">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>2019-11-15 RabbitMQ</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#springboot%E5%85%A5%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text"> Springboot 入门</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#springboot%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%B1%9E%E6%80%A7%E6%B3%A8%E5%85%A5"><span class="toc-number">2.</span> <span class="toc-text"> Springboot 的四种属性注入</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#restcontroller-%E5%8F%AF%E4%BB%A5%E4%BB%A3%E6%9B%BF-controller-%E5%92%8C-response"><span class="toc-number">2.1.</span> <span class="toc-text"> @RestController 可以代替 @Controller  和 @Response</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number">3.</span> <span class="toc-text"> 文件上传</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89error%E9%A1%B5%E9%9D%A2"><span class="toc-number">4.</span> <span class="toc-text"> 自定义 error 页面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#aop"><span class="toc-number">5.</span> <span class="toc-text"> AOP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mapper%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">6.</span> <span class="toc-text"> Mapper 文件的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E7%9A%84%E9%A1%B6%E7%BA%A7%E5%85%83%E7%B4%A0"><span class="toc-number">6.0.1.</span> <span class="toc-text"> 映射文件的顶级元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="toc-number">6.0.2.</span> <span class="toc-text"> 命名空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#select-%E6%A0%87%E7%AD%BE%E7%9A%84%E5%B1%9E%E6%80%A7%E4%BF%A1%E6%81%AF"><span class="toc-number">6.0.3.</span> <span class="toc-text"> Select 标签的属性信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#resultmap%E6%A0%87%E7%AD%BE%E7%9A%84%E5%B1%9E%E6%80%A7%E4%BF%A1%E6%81%AF"><span class="toc-number">6.0.4.</span> <span class="toc-text"> resultMap 标签的属性信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#insert%E6%A0%87%E7%AD%BE%E7%9A%84%E5%B1%9E%E6%80%A7%E4%BF%A1%E6%81%AF"><span class="toc-number">6.0.5.</span> <span class="toc-text"> insert 标签的属性信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E7%94%A8sql%E6%A0%87%E7%AD%BE"><span class="toc-number">6.0.6.</span> <span class="toc-text"> 重用 sql 标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E5%85%A8%E9%99%90%E5%AE%9A%E5%90%8D%E4%BD%BF%E7%94%A8%E5%88%AB%E5%90%8D%E4%BB%A3%E6%9B%BF"><span class="toc-number">6.0.7.</span> <span class="toc-text"> 完全限定名使用别名代替</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">6.0.8.</span> <span class="toc-text"> </span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Zhouy"
+      data-src="/images/panda.jpg">
+  <p class="name" itemprop="name">Zhouy</p>
+  <div class="description" itemprop="description">What's the point of living?</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">36</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">39</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3pob3Z5" title="https:&#x2F;&#x2F;github.com&#x2F;zhovy"><i class="ic i-github"></i></span>
+      <span class="exturl item bilibili" data-url="aHR0cHM6Ly9iMjMudHYvTVJFVGpnSw==" title="https:&#x2F;&#x2F;b23.tv&#x2F;MRETjgK"><i class="ic i-bilibili"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9jYWlqaTEwMjQ=" title="https:&#x2F;&#x2F;twitter.com&#x2F;caiji1024"><i class="ic i-twitter"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTU3NzM3NjAxMw==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;577376013"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS82NTE2NzE5MjEx" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;6516719211"><i class="ic i-weibo"></i></span>
+      <a href="/2285685300@qq.com" title="2285685300@qq.com" class="item email"><i class="ic i-envelope"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/passages/index/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/passages/RabbitMQ/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/My-New-Post/" title="My Jsp">My Jsp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/help-hexo/" title="help-hexo">help-hexo</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/RabbitMQ/" title="2019-11-15 RabbitMQ">2019-11-15 RabbitMQ</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Springboot/" title="Springboot">Springboot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="2019-11-22-微服务">2019-11-22-微服务</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Move%20House/" title="2023-04-21-要搬家了">2023-04-21-要搬家了</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/pagehelper/" title="paging">paging</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/index/" title="分类于 index">index</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/index/markdown/" title="分类于 markdown">markdown</a>
+</div>
+
+    <span><a href="/passages/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/%E5%B1%B1%E4%B8%9C-%E6%B7%84%E5%8D%9A/" title="山东-淄博">山东-淄博</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/JSTL/" title="JSTL">JSTL</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zhouy @ 🐯</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">70k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:03</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'passages/Springboot/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

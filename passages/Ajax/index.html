@@ -1,0 +1,713 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="https://zhovy.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="https://zhovy.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="https://zhovy.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="-JavaScript" />
+
+
+<link rel="canonical" href="https://zhovy.github.io/passages/Ajax/">
+
+
+
+  <title>
+Ajax |
+🐯 = Hexo = subtitle</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Ajax
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2019-10-18 09:50:04">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2019-10-18T09:50:04+08:00">2019-10-18</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>5k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>5 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">🐯</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://zhovy.github.io/passages/Ajax/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/panda.jpg">
+    <meta itemprop="name" content="Zhouy">
+    <meta itemprop="description" content="subtitle, What's the point of living?">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="ajax"><a class="markdownIt-Anchor" href="#ajax">#</a> Ajax</h1>
+<p>常见的方法</p>
+<p><strong>1.url</strong>:<br>
+ 要求为 String 类型的参数，（默认为当前页地址）发送请求的地址。</p>
+<p><strong>2.type</strong>:<br>
+ 要求为 String 类型的参数，请求方式（post 或 get）默认为 get。注意其他 http 请求方法，例如 put 和 delete 也可以使用，但仅部分浏览器支持。</p>
+<p><strong>3.timeout</strong>:<br>
+ 要求为 Number 类型的参数，设置请求超时时间（毫秒）。此设置将覆盖 $.ajaxSetup () 方法的全局设置。</p>
+<p><strong>4.async</strong>:<br>
+ 要求为 Boolean 类型的参数，默认设置为 true，所有请求均为异步请求。如果需要发送同步请求，请将此选项设置为 false。注意，同步请求将锁住浏览器，用户其他操作必须等待请求完成才可以执行。</p>
+<p><strong>5.cache</strong>:<br>
+ 要求为 Boolean 类型的参数，默认为 true（当 dataType 为 script 时，默认为 false），设置为 false 将不会从浏览器缓存中加载请求信息。</p>
+<p><strong>6.data</strong>:<br>
+ 要求为 Object 或 String 类型的参数，发送到服务器的数据。如果已经不是字符串，将自动转换为字符串格式。get 请求中将附加在 url 后。防止这种自动转换，可以查看　　processData 选项。对象必须为 key/value 格式，例如 {foo1:“bar1”,foo2:“bar2”} 转换为 &amp; foo1=bar1&amp;foo2=bar2。如果是数组，JQuery 将自动为不同值对应同一个名称。例如 {foo:[“bar1”,“bar2”]} 转换为 &amp; foo=bar1&amp;foo=bar2。</p>
+<p><strong>7.dataType</strong>:<br>
+ 要求为 String 类型的参数，预期服务器返回的数据类型。如果不指定，JQuery 将自动根据 http 包 mime 信息返回 responseXML 或 responseText，并作为回调函数参数传递。可用的类型如下：<br>
+xml：返回 XML 文档，可用 JQuery 处理。<br>
+html：返回纯文本 HTML 信息；包含的 script 标签会在插入 DOM 时执行。<br>
+script：返回纯文本 JavaScript 代码。不会自动缓存结果。除非设置了 cache 参数。注意在远程请求时（不在同一个域下），所有 post 请求都将转为 get 请求。<br>
+json：返回 JSON 数据。<br>
+jsonp：JSONP 格式。使用 SONP 形式调用函数时，例如 myurl?callback=?，JQuery 将自动替换后一个 “?” 为正确的函数名，以执行回调函数。<br>
+text：返回纯文本字符串。</p>
+<p><strong>8.beforeSend</strong>：<br>
+要求为 Function 类型的参数，发送请求前可以修改 XMLHttpRequest 对象的函数，例如添加自定义 HTTP 头。在 beforeSend 中如果返回 false 可以取消本次 ajax 请求。XMLHttpRequest 对象是惟一的参数。<br>
+function(XMLHttpRequest){<br>
+this;  // 调用本次 ajax 请求时传递的 options 参数<br>
+}<br>
+<strong>9.complete</strong>：<br>
+要求为 Function 类型的参数，请求完成后调用的回调函数（请求成功或失败时均调用）。参数：XMLHttpRequest 对象和一个描述成功请求类型的字符串。<br>
+function(XMLHttpRequest, textStatus){<br>
+this;  // 调用本次 ajax 请求时传递的 options 参数<br>
+}</p>
+<p><strong>10.success</strong>：要求为 Function 类型的参数，请求成功后调用的回调函数，有两个参数。<br>
+(1) 由服务器返回，并根据 dataType 参数进行处理后的数据。<br>
+(2) 描述状态的字符串。<br>
+function(data, textStatus){<br>
+//data 可能是 xmlDoc、jsonObj、html、text 等等<br>
+ this; // 调用本次 ajax 请求时传递的 options 参数<br>
+}</p>
+<p><strong>11.error</strong>:<br>
+ 要求为 Function 类型的参数，请求失败时被调用的函数。该函数有 3 个参数，即 XMLHttpRequest 对象、错误信息、捕获的错误对象 (可选)。ajax 事件函数如下：<br>
+function(XMLHttpRequest, textStatus, errorThrown){<br>
+// 通常情况下 textStatus 和 errorThrown 只有其中一个包含信息<br>
+ this;  // 调用本次 ajax 请求时传递的 options 参数<br>
+}</p>
+<p><strong>12.contentType</strong>：<br>
+要求为 String 类型的参数，当发送信息至服务器时，内容编码类型默认为 &quot;application/x-www-form-urlencoded&quot;。该默认值适合大多数应用场合。</p>
+<p><strong>13.dataFilter</strong>：<br>
+要求为 Function 类型的参数，给 Ajax 返回的原始数据进行预处理的函数。提供 data 和 type 两个参数。data 是 Ajax 返回的原始数据，type 是调用 jQuery.ajax 时提供的 dataType 参数。函数返回的值将由 jQuery 进一步处理。<br>
+function(data, type){<br>
+// 返回处理后的数据<br>
+ return data;<br>
+}</p>
+<p><strong>14.dataFilter</strong>：<br>
+要求为 Function 类型的参数，给 Ajax 返回的原始数据进行预处理的函数。提供 data 和 type 两个参数。data 是 Ajax 返回的原始数据，type 是调用 jQuery.ajax 时提供的 dataType 参数。函数返回的值将由 jQuery 进一步处理。<br>
+function(data, type){<br>
+// 返回处理后的数据<br>
+ return data;<br>
+}</p>
+<p><strong>15.global</strong>：<br>
+要求为 Boolean 类型的参数，默认为 true。表示是否触发全局 ajax 事件。设置为 false 将不会触发全局 ajax 事件，ajaxStart 或 ajaxStop 可用于控制各种 ajax 事件。</p>
+<p><strong>16.ifModified</strong>：<br>
+要求为 Boolean 类型的参数，默认为 false。仅在服务器数据改变时获取新数据。服务器数据改变判断的依据是 Last-Modified 头信息。默认值是 false，即忽略头信息。</p>
+<p><strong>17.jsonp</strong>：<br>
+要求为 String 类型的参数，在一个 jsonp 请求中重写回调函数的名字。该值用来替代在 &quot;callback=?&quot; 这种 GET 或 POST 请求中 URL 参数里的 &quot;callback&quot; 部分，例如 {jsonp:‘onJsonPLoad’} 会导致将 &quot;onJsonPLoad=?&quot; 传给服务器。</p>
+<p><strong>18.username</strong>：<br>
+要求为 String 类型的参数，用于响应 HTTP 访问认证请求的用户名。</p>
+<p><strong>19.password</strong>：<br>
+要求为 String 类型的参数，用于响应 HTTP 访问认证请求的密码。</p>
+<p><strong>20.processData</strong>：<br>
+要求为 Boolean 类型的参数，默认为 true。默认情况下，发送的数据将被转换为对象（从技术角度来讲并非字符串）以配合默认内容类型 &quot;application/x-www-form-urlencoded&quot;。如果要发送 DOM 树信息或者其他不希望转换的信息，请设置为 false。</p>
+<p><strong>21.scriptCharset</strong>：<br>
+要求为 String 类型的参数，只有当请求时 dataType 为 &quot;jsonp&quot; 或者 &quot;script&quot;，并且 type 是 GET 时才会用于强制修改字符集 (charset)。通常在本地和远程的内容编码不同时使用。</p>
+<p>案例代码：</p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#send'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>         $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>             <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"GET"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="5"></td><td><pre>             <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">"test.json"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="6"></td><td><pre>             <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">username</span><span class="token operator">:</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#username"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token literal-property property">content</span><span class="token operator">:</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#content"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="7"></td><td><pre>             <span class="token literal-property property">dataType</span><span class="token operator">:</span> <span class="token string">"json"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="8"></td><td><pre>             <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>                         <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#resText'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 清空 resText 里面的所有内容</span></pre></td></tr><tr><td data-num="10"></td><td><pre>                         <span class="token keyword">var</span> html <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span> </pre></td></tr><tr><td data-num="11"></td><td><pre>                         $<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">commentIndex<span class="token punctuation">,</span> comment</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>                               html <span class="token operator">+=</span> <span class="token string">'&lt;div class="comment">&lt;h6>'</span> <span class="token operator">+</span> comment<span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="13"></td><td><pre>                                         <span class="token operator">+</span> <span class="token string">':&lt;/h6>&lt;p class="para"'</span> <span class="token operator">+</span> comment<span class="token punctuation">[</span><span class="token string">'content'</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="14"></td><td><pre>                                         <span class="token operator">+</span> <span class="token string">'&lt;/p>&lt;/div>'</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>                         <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>                         <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#resText'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>                      <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>         <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><h1 id="异步刷新-js和xml"><a class="markdownIt-Anchor" href="#异步刷新-js和xml">#</a> 异步刷新 js 和 xml</h1>
+<h2 id="tags-jsp"><a class="markdownIt-Anchor" href="#tags-jsp">#</a> tags: Jsp</h2>
+<h1 id="异步刷新-js和xml-2"><a class="markdownIt-Anchor" href="#异步刷新-js和xml-2">#</a> 异步刷新 js 和 xml</h1>
+<p>异步刷新：如果网页中的某一个地方需要修改，异步刷新可以使：只刷新需要修改的地方，而页面其他的地方保持不变<br>
+例如：百度搜索框</p>
+<h3 id="实现"><a class="markdownIt-Anchor" href="#实现">#</a> 实现：</h3>
+<h3 id="jquery常用"><a class="markdownIt-Anchor" href="#jquery常用">#</a> jquery:(常用)</h3>
+<h6 id="ajax-2"><a class="markdownIt-Anchor" href="#ajax-2">#</a> ajax</h6>
+<pre><code>
+$.ajax(&#123;
+url:服务器地址,
+请求方式:post|get,
+data：请求的数据,
+success:function(result,testStatus)&#123;
+
+&#125;,
+error:function(xhr,errorMessage,e)&#123;
+        
+&#125;
+
+&#125;);
+
+</code></pre>
+<h6 id="第二种方式-get-post-load"><a class="markdownIt-Anchor" href="#第二种方式-get-post-load">#</a> 第二种方式 get post load</h6>
+<p>$.get(<br>
+服务器地址，<br>
+ 请求数据，<br>
+function (result){</p>
+<p>}<br>
+)<br>
+$.post(<br>
+服务器地址，<br>
+ 请求数据，<br>
+function (result){</p>
+<p>},<br>
+ 预期返回值类型 (string\xml) -&gt; “text”   “json”  “xml”<br>
+);</p>
+<p>将服务端的返回值，返回到 load 选择的元素中 (&quot;#tip&quot;)<br>
+$(&quot;#tip&quot;).load(<br>
+服务器地址，<br>
+ 请求数据，</p>
+<p>把返回值放到 Servlet 中去  用<span id = "tip"></span>显示<br>
+);</p>
+<h1 id="json-数组"><a class="markdownIt-Anchor" href="#json-数组">#</a> json 数组</h1>
+<p>var student = {“name”:“name”,“sno”:12}<br>
+var students = [<br>
+{“name”:“name”,“sno”:12}<br>
+{“name”:“name”,“sno”:122}<br>
+{“name”:“name”,“sno”:1222}<br>
+]<br>
+alter(studnets[1].name+&quot;----&quot;+students.sno[1]);</p>
+<h6 id="getjson"><a class="markdownIt-Anchor" href="#getjson">#</a> $.getJSON()</h6>
+<p>$.getJSON(<br>
+服务器地址，<br>
+json 格式的请求数据，</p>
+<pre><code>function (result)&#123;
+        if(result.msg==&quot;true&quot;)&#123;//msg:true|false 
+				alert(&quot;请更换号码，此号码已存在&quot;);
+			&#125;else&#123;
+				alert(&quot;注册成功&quot;);
+				
+			&#125;
+&#125;
+)
+</code></pre>
+<p>如果前端的返回值是 json 格式 服务端传值也要是 json<br>
+out.write (&quot;{“msg”:&quot;“true”}&quot;);   write 只有一个参数  ，里面的引号 通过转义字符显示</p>
+<h3 id="js-xmlhttprequest"><a class="markdownIt-Anchor" href="#js-xmlhttprequest">#</a> js:  XMLHttpRequest</h3>
+<pre><code>XMlHttpRequest对象的方法：
+Open(方法名(提交方式get|post),服务器地址，ture):与服务器建立连接   
+send():
+    get: send(null)
+    post: send(参数值))
+setRquestHeader(header,value):
+    get:不需要设置此方法
+    post:需要设置：
+            a.如果请求的元素中包含了上传文件：
+                    setRequestHeader(&quot;Content-Type&quot;,&quot;multipart/from-data&quot;);
+            b.不包含了上传文件
+                    setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-form-urlencoded&quot;);
+
+</code></pre>
+<h3 id="xmlhttprquest对象的属性"><a class="markdownIt-Anchor" href="#xmlhttprquest对象的属性">#</a> XMLHttpRquest 对象的属性：</h3>
+<p>readyState: 请求状态  0-4 只有状态为 4 代表请求完毕<br>
+ status: 响应状态     只有 200 代表响应正常<br>
+ onreadystatechange: 回调函数<br>
+ responseText: 响应格式为 String<br>
+responseXML: 响应格式为 XML</p>
+
+      <div class="tags">
+          <a href="/tags/JavaScript/" rel="tag"><i class="ic i-tag"></i> -JavaScript</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span id="passages/Ajax/" class="item leancloud_visitors" data-flag-title="Ajax" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Zhouy 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="Zhouy 宝贝不是paypal">
+        <p>宝贝不是paypal</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Zhouy 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Zhouy <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://zhovy.github.io/passages/Ajax/" title="Ajax">https://zhovy.github.io/passages/Ajax/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/passages/Listner/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesng5oej20zk0m87d4.jpg" title="Listener">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Listener</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/passages/Structure-And-Algorithm/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhtuo6nj20zk0m8ttm.jpg" title="Structure And Algorithm">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Structure And Algorithm</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ajax"><span class="toc-number">1.</span> <span class="toc-text"> Ajax</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E5%88%B7%E6%96%B0-js%E5%92%8Cxml"><span class="toc-number">2.</span> <span class="toc-text"> 异步刷新 js 和 xml</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#tags-jsp"><span class="toc-number">2.1.</span> <span class="toc-text"> tags: Jsp</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E5%88%B7%E6%96%B0-js%E5%92%8Cxml-2"><span class="toc-number">3.</span> <span class="toc-text"> 异步刷新 js 和 xml</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">3.0.1.</span> <span class="toc-text"> 实现：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jquery%E5%B8%B8%E7%94%A8"><span class="toc-number">3.0.2.</span> <span class="toc-text"> jquery:(常用)</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#ajax-2"><span class="toc-number">3.0.2.0.0.1.</span> <span class="toc-text"> ajax</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E6%96%B9%E5%BC%8F-get-post-load"><span class="toc-number">3.0.2.0.0.2.</span> <span class="toc-text"> 第二种方式 get post load</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#json-%E6%95%B0%E7%BB%84"><span class="toc-number">4.</span> <span class="toc-text"> json 数组</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#getjson"><span class="toc-number">4.0.0.0.0.1.</span> <span class="toc-text"> $.getJSON()</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js-xmlhttprequest"><span class="toc-number">4.0.1.</span> <span class="toc-text"> js:  XMLHttpRequest</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#xmlhttprquest%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">4.0.2.</span> <span class="toc-text"> XMLHttpRquest 对象的属性：</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Zhouy"
+      data-src="/images/panda.jpg">
+  <p class="name" itemprop="name">Zhouy</p>
+  <div class="description" itemprop="description">What's the point of living?</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">36</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">39</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3pob3Z5" title="https:&#x2F;&#x2F;github.com&#x2F;zhovy"><i class="ic i-github"></i></span>
+      <span class="exturl item bilibili" data-url="aHR0cHM6Ly9iMjMudHYvTVJFVGpnSw==" title="https:&#x2F;&#x2F;b23.tv&#x2F;MRETjgK"><i class="ic i-bilibili"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9jYWlqaTEwMjQ=" title="https:&#x2F;&#x2F;twitter.com&#x2F;caiji1024"><i class="ic i-twitter"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTU3NzM3NjAxMw==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;577376013"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS82NTE2NzE5MjEx" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;6516719211"><i class="ic i-weibo"></i></span>
+      <a href="/2285685300@qq.com" title="2285685300@qq.com" class="item email"><i class="ic i-envelope"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/passages/Listner/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/passages/Structure-And-Algorithm/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/JSTL/" title="JSTL">JSTL</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Springboot/" title="Springboot">Springboot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/help-hexo/" title="help-hexo">help-hexo</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Mysql/" title="Mysql">Mysql</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/paging/" title="paging">paging</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/QuickBI/" title="QuickBI">QuickBI</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Listner/" title="Listener">Listener</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/SpringMVC/" title="SpringMVC">SpringMVC</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/%E9%9D%A2%E8%AF%95/" title="My Jsp">My Jsp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="2019-12-5-Linux常用指令">2019-12-5-Linux常用指令</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zhouy @ 🐯</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">70k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:03</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'passages/Ajax/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

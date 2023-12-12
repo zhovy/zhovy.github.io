@@ -1,0 +1,682 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="https://zhovy.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="https://zhovy.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="https://zhovy.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="SpringMVC - java" />
+
+
+<link rel="canonical" href="https://zhovy.github.io/passages/SpringMVC/">
+
+
+
+  <title>
+SpringMVC |
+🐯 = Hexo = subtitle</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">SpringMVC
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2019-10-16 16:54:04">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2019-10-16T16:54:04+08:00">2019-10-16</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.7k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">🐯</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://zhovy.github.io/passages/SpringMVC/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/panda.jpg">
+    <meta itemprop="name" content="Zhouy">
+    <meta itemprop="description" content="subtitle, What's the point of living?">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="1找相应的jar包"><a class="markdownIt-Anchor" href="#1找相应的jar包">#</a> 1. 找相应的 JAR 包：</h1>
+<p>新建一个 Springmvc 配置文件：Springmvc.xml<br>
+ 选中常用的：beans  aop context mvc</p>
+<h1 id="2servlet"><a class="markdownIt-Anchor" href="#2servlet">#</a> 2.Servlet</h1>
+<p>Java 类必须符合一定的规范：<br>
+a. 必须继承 javax.servlet.http.HttpServlet<br>
+b. 重写其中的 doGet () 和 doPost () 方法<br>
+ Servlet 要想使用，必须配置<br>
+ Servlet2.5:web.xml<br>
+Servlet3.0:@WebServlet</p>
+<h3 id="步骤"><a class="markdownIt-Anchor" href="#步骤">#</a> 步骤：</h3>
+<p>–编写一个类继承 Servlet<br>
+–重写 doPost,doGet 方法<br>
+–编写 web.xml 文件中的 Servlet-mapping 的映射关系<br>
+还可以新建一个 Servlet，Eclipse 会自动生成相关的配置信息</p>
+<p>web.xml 中的 /：		<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4ODg4L1NlcnZsZXQzMA==">http://localhost:8888/Servlet30</span>   代表项目根路径<br>
+ jap 中的 /：		<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4ODg4">http://localhost:8888</span> 	     服务器根路径</p>
+<p>构建路径，WebContent: 根目录</p>
+<h1 id="servlet-的生命周期"><a class="markdownIt-Anchor" href="#servlet-的生命周期">#</a> Servlet 的生命周期：</h1>
+<p>加载–初始化 -----------        服务          ---------- 销毁 ---- 卸载</p>
+<p>加载<br>
+初始化  init ()， 该方法会在 Servlet 被实例化后 执行<br>
+服务  Service ()-&gt;doGet ()  ,doPost ()<br>
+ 销毁   destroy (), Servlet 被系统回收时执行<br>
+卸载</p>
+<p>init（）第一次访问 触发只执行一次 可以让 tomcat 启动时自动执行<br>
+–tomcat2.: 卸载 xml 文件里      <load-on-startup>1</load-on-startup>    </servlet>		1 先后顺序							<br>
+–toncat3：@WebServlet(value = “/WebcomeServlet”,loadOnStartup = 1)<br>
+ Service ()-&gt;doGet ()  ,doPost ()  调用几次  执行几次<br>
+ destory () 关闭 tomcat 服务器时会被执行</p>
+<h1 id="5servlet-api"><a class="markdownIt-Anchor" href="#5servlet-api">#</a> 5.Servlet API:</h1>
+<p>由两个软件包组成：对应与 Http 协议的软件包，对应于除了 HTTP 协议以为 ia 的其他软件包即 Servlet API 可以适用于 任何通信协议<br>
+我们学习的 Servlet  时位于 javax.servlet.http.HttpServlet;</p>
+<h1 id="6servlet继承关系"><a class="markdownIt-Anchor" href="#6servlet继承关系">#</a> 6.Servlet 继承关系：</h1>
+<p>ServletConfig (): 接口<br>
+ getServletContext getServletContext (): 获取 Servlet 上下文对象  application<br>
+String getInitParameter (String name) 在当前的 Servlet 范围内，获取名为 name 的参数值（初始化参数）</p>
+<p>a.ServletContext 中常见的方法（application）：<br>
+getContextPath (): 相对路径<br>
+ getRealPath (): 绝对路径<br>
+ setAttribute (),getAttribute () String getInitParameter (String name): 在当前 Servlet 范围内，获取名为 name 的参数值（初始化参数）</p>
+<p>Servlet3.0 方式 给当前 Servlet 设置初始值：<br>
+@WebServlet(…,initParams = {@WebInitParam(name=“servletparament30”,value = “servletpatamentvalues30…”)})<br>
+ 此注解只隶属于 Servlet 因此无法为 web 容器设置初始化参数 要想设置 只能在 web.xml 文件中配置</p>
+<h1 id="1三层架构"><a class="markdownIt-Anchor" href="#1三层架构">#</a> 1. 三层架构：</h1>
+<p>–与 MVC 设计模式的目标一致：都是为了解耦合，提高代码的复用率</p>
+<pre><code>表示层（UI）：  
+            前台：对应于MVC 的 VIEW 用于和用户交互，界面的显示
+			WebContent
+
+	        后台：对应于MVC 的 Controller用于控制跳转，调用业务逻辑层
+			Servlet ，（Spring MVC 、Struts2）
+			xxx.servlet
+
+业务逻辑层(BLL)：对应于MVC的Model  逻辑业务模型
+	组装数据访问层	，逻辑性的操作（CRUD：删：查+删）
+		xxx.service
+        
+数据访问层(DAL)：对应于MVC的Model 数据模型
+	直接访问数据库的操作，原子性的操作（CRUD）
+		xxx.dao
+</code></pre>
+<h5 id="三层的关系高内聚-低耦合"><a class="markdownIt-Anchor" href="#三层的关系高内聚-低耦合">#</a> 三层的关系：高内聚、低耦合</h5>
+<p>–上层（表示层）：上层依赖下层 持有成员变量，有 A 的前提  是必须现有 B<br>
+–下层（业务逻辑层，数据访问层）</p>
+<p>三层架构是典型的架构模式，是典型的上下层关系，存在上依赖下层，但是 MVC 不存在上下层的关系，而是相互协作的关系，两者之间没有可比性，是应用于不同领域的技术。</p>
+<h5 id="三层优化"><a class="markdownIt-Anchor" href="#三层优化">#</a> 三层优化：</h5>
+<p>–面向接口开发：先开发接口，再实现类</p>
+<h3 id="让spring-mvc-访问静态资源只需要加入两个注解"><a class="markdownIt-Anchor" href="#让spring-mvc-访问静态资源只需要加入两个注解">#</a> 让 Spring MVC 访问静态资源，只需要加入两个注解：</h3>
+<!-- 加载动态资源和静态资源所协调的两个注解-->
+<pre><code>&lt;mvc:annotation-driven&gt;&lt;/mvc:annotation-driven&gt;
+
+&lt;mvc:default-servlet-handler&gt;&lt;/mvc:default-servlet-handler&gt;
+</code></pre>
+<h1 id="tomcat默认的servlet"><a class="markdownIt-Anchor" href="#tomcat默认的servlet">#</a> Tomcat 默认的 Servlet</h1>
+<p>conf/settings.xml</p>
+<h3 id="spring-mvc-自带类型转换器"><a class="markdownIt-Anchor" href="#spring-mvc-自带类型转换器">#</a> Spring MVC 自带类型转换器</h3>
+<p>&lt;S，T&gt; 两个泛型约束 S 代表 的是源数据类型，T 代表的是泛型约束<br>
+ 1. 将自定义的类型转换器纳入 Spring IOC 容器中<br>
+ 2. 将容器再放入 SpringMVC 提供的 bean 中</p>
+<p>@RequestParam (&quot;&quot;) 是一个触发器的桥梁，当你修饰的对象和 SpringMVC 发现的对象不一致时他会转换成你需要的对象属性</p>
+<h1 id="数据格式化的注解"><a class="markdownIt-Anchor" href="#数据格式化的注解">#</a> 数据格式化的注解</h1>
+<p>1. 配置你所需要的 Bean<br>
+2.@DateTimeFormat(“pattern=“yyyy-MM-dd”)   @NumberFormat(pattern=”###,#&quot;)</p>
+<h1 id="数据校验"><a class="markdownIt-Anchor" href="#数据校验">#</a> 数据校验</h1>
+<p>实现一个 SpringMVC 的一个接口 SpringMVC 会帮你自动搞定<br>
+加入这个注解 自动加载一个 LocalValidatoryBean 他是 ValidatoryFactory 的一个实现类<br>
+<span class="exturl" data-url="bXZjOmFubm90YXRpb24tZHJpdmVu"> mvc:annotation-driven</span>&lt;/mvc:annotation-driven&gt;</p>
+<h1 id="spring-mvc-文件上传处理方法"><a class="markdownIt-Anchor" href="#spring-mvc-文件上传处理方法">#</a> Spring MVC 文件上传处理方法</h1>
+<pre><code>@RequestMapping(value=&quot;testUpload&quot;)
+public String testUpload(@RequestParam('desc') String desc, @RequestParam('file') String file)&#123;
+		System.out.println(&quot;文件描述信息&quot;+desc);
+
+		InputStream input = file.getInputStream();
+		String fileName = file.getOriginalFilename();
+
+		OutStream out = new FileOutStream(&quot;d:\\&quot;+fileName);
+		
+		byte[] bs = new byte[1024];
+		int len = -1;
+
+		whiel((len = input.read(bs))!= -1)&#123;
+			out.write(	bs, 0, len);
+		&#125;
+&#125;
+
+</code></pre>
+<h1 id="拦截器"><a class="markdownIt-Anchor" href="#拦截器">#</a> 拦截器</h1>
+<p>1. 编写拦截器 implements HandlerInterceptor<br>
+2. 配置：将自己写的拦截器 配置到 SpringMVC 中</p>
+<p>拦截器 1 拦截请求 - 拦截器 2 拦截请求 - 请求方法 - 拦截器 2 处理响应 - 拦截器 1 处理响应 只会被最后一个拦截器的 afterComplrtion 渲染</p>
+<h1 id="异常处理"><a class="markdownIt-Anchor" href="#异常处理">#</a> 异常处理</h1>
+<p>SpringMVC: HandlerExceptionResolver 接口<br>
+该接口的每个实现类 都是异常的一种处理方式<br>
+ ExceptionHandlerExceptionResolver: 提供了 @ExceptionHandler 注解，并通过该注解处理<br>
+ // 该方法可以捕获 ArithmeticException 异常</p>
+<pre><code>    @ExceptionHandler(&#123;ArithmeticException.class&#125;)
+    public String handlerArithmeticException(ArithmeticException e)&#123;
+        System.out.println(e);
+    &#125;
+</code></pre>
+<p>@ExceptionHandler 标识的方法的参数 必须在异常类型（Throwable 或其子类）</p>
+<p>异常处理路径：最短优先<br>
+ ExceptionHandler 只能捕获当前类中的异常方法<br>
+如果是其他类 则可以加一个注解</p>
+<p>b.ResponseStatusExceptionResolver 自定义异常显示界面<br>
+ @ResponseStatus (value=&quot;HttpStatus.FORBIDDEN,reason=“数组越界！！”) 类 加上这个注解</p>
+<p>@ResponseStatus 也可以标识在方法前</p>
+<h1 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 总结</h1>
+<p>如果一个方法用于处理异常， 并且只处理当前类中的异常：@ExceptionHandler<br>
+ 如果一个方法用于处理所有类的异常：类前加 @ControllerAdvice 处理异常的方法前加 @ExceptionHandler</p>
+
+      <div class="tags">
+          <a href="/tags/SpringMVC-java/" rel="tag"><i class="ic i-tag"></i> SpringMVC - java</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span id="passages/SpringMVC/" class="item leancloud_visitors" data-flag-title="SpringMVC" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Zhouy 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="Zhouy 宝贝不是paypal">
+        <p>宝贝不是paypal</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Zhouy 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Zhouy <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://zhovy.github.io/passages/SpringMVC/" title="SpringMVC">https://zhovy.github.io/passages/SpringMVC/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/passages/pagehelper/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh0m9pdj20zk0m8hdt.jpg" title="paging">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>paging</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/passages/Expression-Language/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclflwv2aj20zk0m84qp.jpg" title="Expression Language">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Expression Language</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E6%89%BE%E7%9B%B8%E5%BA%94%E7%9A%84jar%E5%8C%85"><span class="toc-number">1.</span> <span class="toc-text"> 1. 找相应的 JAR 包：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2servlet"><span class="toc-number">2.</span> <span class="toc-text"> 2.Servlet</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.0.1.</span> <span class="toc-text"> 步骤：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#servlet-%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">3.</span> <span class="toc-text"> Servlet 的生命周期：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5servlet-api"><span class="toc-number">4.</span> <span class="toc-text"> 5.Servlet API:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6servlet%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB"><span class="toc-number">5.</span> <span class="toc-text"> 6.Servlet 继承关系：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84"><span class="toc-number">6.</span> <span class="toc-text"> 1. 三层架构：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89%E5%B1%82%E7%9A%84%E5%85%B3%E7%B3%BB%E9%AB%98%E5%86%85%E8%81%9A-%E4%BD%8E%E8%80%A6%E5%90%88"><span class="toc-number">6.0.0.0.1.</span> <span class="toc-text"> 三层的关系：高内聚、低耦合</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89%E5%B1%82%E4%BC%98%E5%8C%96"><span class="toc-number">6.0.0.0.2.</span> <span class="toc-text"> 三层优化：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A9spring-mvc-%E8%AE%BF%E9%97%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8F%AA%E9%9C%80%E8%A6%81%E5%8A%A0%E5%85%A5%E4%B8%A4%E4%B8%AA%E6%B3%A8%E8%A7%A3"><span class="toc-number">6.0.1.</span> <span class="toc-text"> 让 Spring MVC 访问静态资源，只需要加入两个注解：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tomcat%E9%BB%98%E8%AE%A4%E7%9A%84servlet"><span class="toc-number">7.</span> <span class="toc-text"> Tomcat 默认的 Servlet</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#spring-mvc-%E8%87%AA%E5%B8%A6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%99%A8"><span class="toc-number">7.0.1.</span> <span class="toc-text"> Spring MVC 自带类型转换器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%9A%84%E6%B3%A8%E8%A7%A3"><span class="toc-number">8.</span> <span class="toc-text"> 数据格式化的注解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C"><span class="toc-number">9.</span> <span class="toc-text"> 数据校验</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#spring-mvc-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="toc-number">10.</span> <span class="toc-text"> Spring MVC 文件上传处理方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="toc-number">11.</span> <span class="toc-text"> 拦截器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-number">12.</span> <span class="toc-text"> 异常处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">13.</span> <span class="toc-text"> 总结</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Zhouy"
+      data-src="/images/panda.jpg">
+  <p class="name" itemprop="name">Zhouy</p>
+  <div class="description" itemprop="description">What's the point of living?</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">36</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">39</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3pob3Z5" title="https:&#x2F;&#x2F;github.com&#x2F;zhovy"><i class="ic i-github"></i></span>
+      <span class="exturl item bilibili" data-url="aHR0cHM6Ly9iMjMudHYvTVJFVGpnSw==" title="https:&#x2F;&#x2F;b23.tv&#x2F;MRETjgK"><i class="ic i-bilibili"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9jYWlqaTEwMjQ=" title="https:&#x2F;&#x2F;twitter.com&#x2F;caiji1024"><i class="ic i-twitter"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTU3NzM3NjAxMw==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;577376013"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS82NTE2NzE5MjEx" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;6516719211"><i class="ic i-weibo"></i></span>
+      <a href="/2285685300@qq.com" title="2285685300@qq.com" class="item email"><i class="ic i-envelope"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/passages/pagehelper/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/passages/Expression-Language/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/%E9%9D%A2%E8%AF%95/" title="My Jsp">My Jsp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Maven/" title="Maven">Maven</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95/" title="基本算法">基本算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/%E5%B1%B1%E4%B8%9C-%E6%B7%84%E5%8D%9A/" title="山东-淄博">山东-淄博</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Structure-And-Algorithm/" title="Structure And Algorithm">Structure And Algorithm</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/jdbc/" title="jdbc">jdbc</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Springboot/" title="Springboot">Springboot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/My-New-Post/" title="My Jsp">My Jsp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Move%20House/" title="2023-04-21-要搬家了">2023-04-21-要搬家了</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/TCP-IP/" title="TCP&#x2F;IP">TCP/IP</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zhouy @ 🐯</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">70k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:03</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'passages/SpringMVC/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

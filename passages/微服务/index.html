@@ -1,0 +1,627 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="https://zhovy.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="https://zhovy.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="https://zhovy.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Springboot,微服务" />
+
+
+<link rel="canonical" href="https://zhovy.github.io/passages/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+
+
+
+  <title>
+2019-11-22-微服务 |
+🐯 = Hexo = subtitle</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">2019-11-22-微服务
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2019-11-22 09:05:36">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2019-11-22T09:05:36+08:00">2019-11-22</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">🐯</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://zhovy.github.io/passages/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/panda.jpg">
+    <meta itemprop="name" content="Zhouy">
+    <meta itemprop="description" content="subtitle, What's the point of living?">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="历史演变"><a class="markdownIt-Anchor" href="#历史演变">#</a> 历史演变</h1>
+<h3 id="单一应用架构"><a class="markdownIt-Anchor" href="#单一应用架构">#</a> 单一应用架构</h3>
+<p>当网站流量很小时，只需要一个应用，所有的功能都部署在一起，以减少部署节点和成本，此时，用具简化增删改查工作量的数据访问框架 (<strong>ORM</strong>) 是关键</p>
+<h3 id="垂直应用架构"><a class="markdownIt-Anchor" href="#垂直应用架构">#</a> 垂直应用架构</h3>
+<p>当访问量逐渐增大，单一应用增加机器带来的加速度越来越小，将应用拆成互不相干的几个应用，以提升效率，此时，用于加速前端页面开发的 Web 框架（<strong>MVC</strong>）是关键</p>
+<h3 id="分布式服务架构"><a class="markdownIt-Anchor" href="#分布式服务架构">#</a> 分布式服务架构</h3>
+<p>当垂直应用越来越多，应用之间交互不可避免，将核心业务抽取出来，作为独立的服务，主键形成稳定的服务中心，是前端应用能更快速的相应多变的市场需求，此时，用于提高业务复用及整合的分布式服务框架（<strong>RPC</strong>）是关键</p>
+<h3 id="流动计算架构"><a class="markdownIt-Anchor" href="#流动计算架构">#</a> 流动计算架构</h3>
+<p>当服务越来越多，容量的评估，小服务资源的浪费等问题逐渐显现，此时需增加一个调度中心基于访问压力管理集群容量，提高集群利用率。此时，用于提高机器利用率的资源调度和治理中心（<strong>SOA</strong>）是关键</p>
+<h1 id="微服务的框架"><a class="markdownIt-Anchor" href="#微服务的框架">#</a> 微服务的框架</h1>
+<h3 id="dubbo"><a class="markdownIt-Anchor" href="#dubbo">#</a> dubbo</h3>
+<h3 id="spring-cloud"><a class="markdownIt-Anchor" href="#spring-cloud">#</a> Spring-Cloud</h3>
+<p>一个项目可以由多个小型服务构成（微服务）</p>
+<h3 id="绑定"><a class="markdownIt-Anchor" href="#绑定">#</a> 绑定</h3>
+<p>@Component// 将此 bean 注入到 spring 容器中<br>
+ @ConfigurationProperties (prefix = “student”) // 去配置文件里面找 student<br>
+ 还可以在字段里面 @Value (“zs”) 注入属性<br>
+ ConfigurationProperties     Value<br>
+@PropertySource (value = {“classpath:conf.properties”})// 可以指定非默认文件里面的值，只能加载 properties，不能加载 yaml</p>
+<p>​</p>
+<figure class="highlight yaml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre>区别：</pre></td></tr><tr><td data-num="2"></td><td><pre>                批量注入        单个注入</pre></td></tr><tr><td data-num="3"></td><td><pre>松散语法         支持            不支持 </pre></td></tr><tr><td data-num="4"></td><td><pre>SPEL            不支持           支持    </pre></td></tr><tr><td data-num="5"></td><td><pre>数据校验         支持            不支持</pre></td></tr><tr><td data-num="6"></td><td><pre>注入复杂类型     支持             不支持</pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre>简单类型（8个基本类型+String+Date）</pre></td></tr></table></figure><h1 id="yaml"><a class="markdownIt-Anchor" href="#yaml">#</a> yaml</h1>
+<p>student:<br>
+name: zs<br>
+age: 23<br>
+sex: true<br>
+birthary:2019/10/12<br>
+//map 类型<br>
+ location: {province: 陕西，city: 西安，zone: 莲湖区}<br>
+// 数组或集合类型<br>
+ hobbies: [足球，篮球]<br>
+ skills： [编程，金融]<br>
+// 对象类型<br>
+ pet: {nickname: wc,strain: hsq}// 写成一行的叫行内写法<br>
+ nickname: wc<br>
+strain: hsq</p>
+<h3 id="note"><a class="markdownIt-Anchor" href="#note">#</a> note:</h3>
+<p>//map 里面可以加双引号里面可以实现转义字符，不加的话就是原样输出<br>
+中括号可以省，大括号不能省略<br>
+ yaml 每一个冒号后面必须跟一个空格</p>
+<figure class="highlight yaml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">数组还可以写成lication</span><span class="token punctuation">:</span> </pre></td></tr><tr><td data-num="2"></td><td><pre>                <span class="token key atrule">provience</span><span class="token punctuation">:</span> 陕西</pre></td></tr><tr><td data-num="3"></td><td><pre>                <span class="token key atrule">city</span><span class="token punctuation">:</span> 西安</pre></td></tr><tr><td data-num="4"></td><td><pre>                <span class="token key atrule">zone</span><span class="token punctuation">:</span> 莲湖区</pre></td></tr></table></figure><h4 id="springboot全局配置文件中的-占位符表达式"><a class="markdownIt-Anchor" href="#springboot全局配置文件中的-占位符表达式">#</a> springboot 全局配置文件中的 占位符表达式</h4>
+<p>1. 随机数 ${random.uuid} 等<br>
+ 2. 引用变量值</p>
+<figure class="highlight yaml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">student</span><span class="token punctuation">:</span> </pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token key atrule">uname</span><span class="token punctuation">:</span> x</pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token key atrule">name</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span>student.user.name<span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>引用的实际变量是 properties 中的 student.user.name=zs</p>
+<h3 id="多环境的切换"><a class="markdownIt-Anchor" href="#多环境的切换">#</a> 多环境的切换</h3>
+<p>1.properties<br>
+ 默认 boot 会读取 application.properties<br>
+ 有开发，测试环境，命名的不同的 properties 文件名，指定 spring.profiles.active=test</p>
+<h5 id="动态的配置环境"><a class="markdownIt-Anchor" href="#动态的配置环境">#</a> 动态的配置环境</h5>
+<p>i: 命令行方式：–spring.profiles.activr=test<br>
+ii: 通过 vm 指定参数：STS (Eclipse): Run Configuration - Argument - VM -Dspring.profiles.active = 环境名</p>
+<h4 id="配置文件的位置项目内部的配置文件"><a class="markdownIt-Anchor" href="#配置文件的位置项目内部的配置文件">#</a> 配置文件的位置：项目内部的配置文件</h4>
+<p>properties 和 yml 中的配置，相互补充，如果有冲突，则优先读取 properties 文件</p>
+<h5 id="可以存在的位置"><a class="markdownIt-Anchor" href="#可以存在的位置">#</a> 可以存在的位置</h5>
+<p>file: 项目根目录 /config<br>
+file: 项目根目录 /<br>
+classpath: 项目根目录 /config<br>
+classpath: 项目根目录<br>
+如果冲突，则优先级从上往下<br>
+如果不冲突，则互补结合使用</p>
+<h4 id="项目外面的配置文件"><a class="markdownIt-Anchor" href="#项目外面的配置文件">#</a> 项目外面的配置文件</h4>
+<h4 id="项目运行参数-severport8882"><a class="markdownIt-Anchor" href="#项目运行参数-severport8882">#</a> 项目运行参数 --sever.port=8882</h4>
+<h3 id="springboot默认的日志框架是slf4j和logback"><a class="markdownIt-Anchor" href="#springboot默认的日志框架是slf4j和logback">#</a> springboot 默认的日志框架是 slf4j 和 logback</h3>
+<h3 id="springboot整合jsp开发"><a class="markdownIt-Anchor" href="#springboot整合jsp开发">#</a> Springboot 整合 JSP 开发</h3>
+<p>之前的 springboot 默认  自带一个内置的 tomcat, 不需要打 war 包，直接通过 jar 运行</p>
+<pre><code>  &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;/dependency&gt;
+</code></pre>
+<p>provided 的意思是将项目打包时，不需要将内置的 tomcat 一起打包</p>
+<p>建立基本的 webapp/WEB-INF/</p>
+
+      <div class="tags">
+          <a href="/tags/Springboot/" rel="tag"><i class="ic i-tag"></i> Springboot</a>
+          <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" rel="tag"><i class="ic i-tag"></i> 微服务</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span id="passages/微服务/" class="item leancloud_visitors" data-flag-title="2019-11-22-微服务" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Zhouy 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="Zhouy 宝贝不是paypal">
+        <p>宝贝不是paypal</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Zhouy 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Zhouy <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://zhovy.github.io/passages/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="2019-11-22-微服务">https://zhovy.github.io/passages/微服务/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/passages/RabbitMQ/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciusoyjnj219g0u0x56.jpg" title="2019-11-15 RabbitMQ">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>2019-11-15 RabbitMQ</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/passages/SpringCloud/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesx5fdwj20zk0m81kx.jpg" title="2019-11-25-SpringCloud">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>2019-11-25-SpringCloud</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%86%E5%8F%B2%E6%BC%94%E5%8F%98"><span class="toc-number">1.</span> <span class="toc-text"> 历史演变</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%B8%80%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84"><span class="toc-number">1.0.1.</span> <span class="toc-text"> 单一应用架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9E%82%E7%9B%B4%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84"><span class="toc-number">1.0.2.</span> <span class="toc-text"> 垂直应用架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84"><span class="toc-number">1.0.3.</span> <span class="toc-text"> 分布式服务架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E5%8A%A8%E8%AE%A1%E7%AE%97%E6%9E%B6%E6%9E%84"><span class="toc-number">1.0.4.</span> <span class="toc-text"> 流动计算架构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%A1%86%E6%9E%B6"><span class="toc-number">2.</span> <span class="toc-text"> 微服务的框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#dubbo"><span class="toc-number">2.0.1.</span> <span class="toc-text"> dubbo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#spring-cloud"><span class="toc-number">2.0.2.</span> <span class="toc-text"> Spring-Cloud</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A"><span class="toc-number">2.0.3.</span> <span class="toc-text"> 绑定</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#yaml"><span class="toc-number">3.</span> <span class="toc-text"> yaml</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#note"><span class="toc-number">3.0.1.</span> <span class="toc-text"> note:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#springboot%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84-%E5%8D%A0%E4%BD%8D%E7%AC%A6%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">3.0.1.1.</span> <span class="toc-text"> springboot 全局配置文件中的 占位符表达式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%8E%AF%E5%A2%83%E7%9A%84%E5%88%87%E6%8D%A2"><span class="toc-number">3.0.2.</span> <span class="toc-text"> 多环境的切换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E7%9A%84%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="toc-number">3.0.2.0.1.</span> <span class="toc-text"> 动态的配置环境</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%8D%E7%BD%AE%E9%A1%B9%E7%9B%AE%E5%86%85%E9%83%A8%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">3.0.2.1.</span> <span class="toc-text"> 配置文件的位置：项目内部的配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E5%AD%98%E5%9C%A8%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="toc-number">3.0.2.1.1.</span> <span class="toc-text"> 可以存在的位置</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%A4%96%E9%9D%A2%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">3.0.2.2.</span> <span class="toc-text"> 项目外面的配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C%E5%8F%82%E6%95%B0-severport8882"><span class="toc-number">3.0.2.3.</span> <span class="toc-text"> 项目运行参数 --sever.port&#x3D;8882</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#springboot%E9%BB%98%E8%AE%A4%E7%9A%84%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6%E6%98%AFslf4j%E5%92%8Clogback"><span class="toc-number">3.0.3.</span> <span class="toc-text"> springboot 默认的日志框架是 slf4j 和 logback</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#springboot%E6%95%B4%E5%90%88jsp%E5%BC%80%E5%8F%91"><span class="toc-number">3.0.4.</span> <span class="toc-text"> Springboot 整合 JSP 开发</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Zhouy"
+      data-src="/images/panda.jpg">
+  <p class="name" itemprop="name">Zhouy</p>
+  <div class="description" itemprop="description">What's the point of living?</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">36</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">39</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3pob3Z5" title="https:&#x2F;&#x2F;github.com&#x2F;zhovy"><i class="ic i-github"></i></span>
+      <span class="exturl item bilibili" data-url="aHR0cHM6Ly9iMjMudHYvTVJFVGpnSw==" title="https:&#x2F;&#x2F;b23.tv&#x2F;MRETjgK"><i class="ic i-bilibili"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9jYWlqaTEwMjQ=" title="https:&#x2F;&#x2F;twitter.com&#x2F;caiji1024"><i class="ic i-twitter"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTU3NzM3NjAxMw==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;577376013"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS82NTE2NzE5MjEx" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;6516719211"><i class="ic i-weibo"></i></span>
+      <a href="/2285685300@qq.com" title="2285685300@qq.com" class="item email"><i class="ic i-envelope"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/passages/RabbitMQ/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/passages/SpringCloud/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Ajax/" title="Ajax">Ajax</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Git/" title="Git">Git</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Structure-And-Algorithm/" title="Structure And Algorithm">Structure And Algorithm</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Mysql/" title="Mysql">Mysql</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/MybatisPlus/" title="MybatisPlus">MybatisPlus</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/index/" title="分类于 index">index</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/index/markdown/" title="分类于 markdown">markdown</a>
+</div>
+
+    <span><a href="/passages/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="2019-12-5-Linux常用指令">2019-12-5-Linux常用指令</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Vue/" title="2019-12-27-Vue">2019-12-27-Vue</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Capabilities-OR-Mindset/" title="Capabilities OR Mindset">Capabilities OR Mindset</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Springboot/" title="Springboot">Springboot</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zhouy @ 🐯</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">70k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:03</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'passages/微服务/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
