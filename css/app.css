@@ -4696,8 +4696,7 @@ code,
   display: block;
 }
 .md ol>li.quiz ul.options {
-  -webkit-padding-start: 0.625rem;
-          padding-inline-start: 0.625rem;
+  padding-inline-start: 0.625rem;
 }
 .md ol>li.quiz ul.options li::before {
   color: var(--color-grey);

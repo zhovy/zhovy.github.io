@@ -76,7 +76,7 @@ paging |
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>2.4k</span>
+    <span>896</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -84,7 +84,7 @@ paging |
       <i class="ic i-clock"></i>
     </span>
     <span class="text">阅读时长</span>
-    <span>2 分钟</span>
+    <span>1 分钟</span>
   </span>
 </div>
 
@@ -117,12 +117,12 @@ paging |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/jake-hills-mI02K_LxlfU-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/martin-jernberg-qie9wa-YLK8-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/daniel-leone-v7daTKlZzaw-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/v2osk-1Z2niiBPg5A-unsplash.jpg"></li>
           <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/andrew-ridley-Kt5hRENuotI-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/mohammad-alizade-4wzRuAb-KWs-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/tobias-rademacher-NuBvAE6VfSM-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/tyler-lastovich-1755wsQzce8-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/lucian-qxO2PBn7eKU-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/matt-howard-UCDiLtfDRgU-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/cristina-gottardi-CSpjU6hYo_0-unsplash.jpg"></li>
         </ul>
       </div>
     </header>
@@ -203,54 +203,6 @@ paging |
  3. 总页数<br>
  4. 当前页<br>
  5. 当前页的对象集合（实体类集合）：每页	所显示的所有数据</p>
-<h6 id="存放路径"><a class="markdownIt-Anchor" href="#存放路径">#</a> 存放路径</h6>
-<p>为了防止上传目录丢失 有两种办法 一种是把上传目录放到非 tomcat 目录，指定虚拟目录</p>
-<h1 id="坑"><a class="markdownIt-Anchor" href="#坑">#</a> 坑</h1>
-<p>当你重启服务器的时候你新建的存放文件的文件夹会某明奇妙的消失，这和 tomcat 和 java 编译的 class 有关，有股源文件有修改的话，他会把文件重新部署一边，然而里面的文件就会被重写</p>
-<h2 id="熟练使用debug-进行调试程序"><a class="markdownIt-Anchor" href="#熟练使用debug-进行调试程序">#</a> 熟练使用 DeBug 进行调试程序</h2>
-<p>打一个或多个断点<br>
-用 debug 开启服务<br>
- F5：跳入方法<br>
- F6：向下逐行调试<br>
- F7：跳出方法<br>
- F8：直接跳转到下一个断点</p>
-<h1 id="文件下载"><a class="markdownIt-Anchor" href="#文件下载">#</a> 文件下载</h1>
-<p>// 设置消息头</p>
-<pre><code>		response.addHeader(&quot;content-Type&quot;, &quot;application/octet-stream&quot;);
-		response.addHeader(&quot;content-Disposition&quot;, &quot;attachment;filename=&quot;);
-		//解决中文文件名乱码
-		1.Edge
-		+filename++URLEncoder.encode(filename,&quot;utf-8&quot;)
-		2.Fire Fox
-		给文件名加上前缀和后缀
-		前缀 =?UTF-8?B?
-		Base64.encode
-		String 构造方法
-		后缀 ?=
-		示例：response.addHeader(&quot;content-Disposition&quot;,&quot;attchment;filename==?UTF-8?B?&quot;+new String(Base64.encodeBase64(filename.getBases(&quot;UTF-8&quot;)))+&quot;?=&quot;);
-		对于不同的浏览器设置不同的编码格式
-		String agent = resquest.getHead(&quot;User-Agent&quot;);
-		if(agent.toLowerCase().indexOff(firefox))&#123;
-			response.addHeader(&quot;content-Disposition&quot;,&quot;attchment;filename==?UTF-8?B?&quot;+new String(Base64.encodeBase64(filename.getBases(&quot;UTF-8&quot;)))+&quot;?=&quot;);
-		&#125;else&#123;
-			response.addHeader(&quot;content-Disposition&quot;, &quot;attachment;filename=&quot;+filename++URLEncoder.encode(filename,&quot;utf-8&quot;));
-		&#125;
-</code></pre>
-<p>1.Servlet 通过文件的地址，转换成输入存放到 Servlet</p>
-<pre><code>InputStream in = getServletContext().getResourceAsStream(&quot;/res/MIME.png&quot;);
-</code></pre>
-<p>2.Servlet 把输入流转换成输出流</p>
-<pre><code>ServletOutputStream out = response.getOutputStream();
-</code></pre>
-<p>3. 通过转换得到文件</p>
-<pre><code>byte [] bs = new byte[10];  
-		int len = -1;
-		while((len = in.read(bs))!=-1) &#123;
-			out.write(bs,0,len);
-		&#125;
-		out.close();
-		in.close();
-</code></pre>
 
       <div class="tags">
           <a href="/tags/PageHelper/" rel="tag"><i class="ic i-tag"></i> -PageHelper</a>
@@ -273,7 +225,7 @@ paging |
       
 <div class="reward">
   <button><i class="ic i-heartbeat"></i> 赞赏</button>
-  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <p>请我喝[咖啡]~(￣▽￣)~*</p>
   <div id="qr">
       
       <div>
@@ -321,10 +273,10 @@ paging |
     <div class="item left">
       
 
-  <a href="/passages/paging/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;zhovy&#x2F;images&#x2F;jake-hills-mI02K_LxlfU-unsplash.jpg" title="paging">
+  <a href="/passages/Mybatis/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;zhovy&#x2F;images&#x2F;tobias-rademacher-NuBvAE6VfSM-unsplash.jpg" title="Mybatis">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>paging</h3>
+  <h3>Mybatis</h3>
   </a>
 
     </div>
@@ -353,7 +305,7 @@ paging |
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E5%88%86%E9%A1%B5"><span class="toc-number">1.</span> <span class="toc-text"> 1. 分页</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mysql-%E5%92%8C-oracle%E7%9A%84-sql-%E8%AF%AD%E5%8F%A5%E4%B8%8D%E5%A4%AA%E4%B8%80%E6%A0%B7"><span class="toc-number">1.0.1.</span> <span class="toc-text"> mysql  和 ORACLE 的 SQL 语句不太一样</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E9%A1%B5%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.0.1.1.</span> <span class="toc-text"> 分页实现：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E4%B8%AA%E5%8F%98%E9%87%8F%E5%B1%9E%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text"> 5 个变量（属性）</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AD%98%E6%94%BE%E8%B7%AF%E5%BE%84"><span class="toc-number">1.1.0.0.0.1.</span> <span class="toc-text"> 存放路径</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9D%91"><span class="toc-number">2.</span> <span class="toc-text"> 坑</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%86%9F%E7%BB%83%E4%BD%BF%E7%94%A8debug-%E8%BF%9B%E8%A1%8C%E8%B0%83%E8%AF%95%E7%A8%8B%E5%BA%8F"><span class="toc-number">2.1.</span> <span class="toc-text"> 熟练使用 DeBug 进行调试程序</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-number">3.</span> <span class="toc-text"> 文件下载</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E5%88%86%E9%A1%B5"><span class="toc-number">1.</span> <span class="toc-text"> 1. 分页</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mysql-%E5%92%8C-oracle%E7%9A%84-sql-%E8%AF%AD%E5%8F%A5%E4%B8%8D%E5%A4%AA%E4%B8%80%E6%A0%B7"><span class="toc-number">1.0.1.</span> <span class="toc-text"> mysql  和 ORACLE 的 SQL 语句不太一样</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E9%A1%B5%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.0.1.1.</span> <span class="toc-text"> 分页实现：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E4%B8%AA%E5%8F%98%E9%87%8F%E5%B1%9E%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text"> 5 个变量（属性）</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -368,7 +320,7 @@ paging |
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">36</span>
+        <span class="count">30</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -380,7 +332,7 @@ paging |
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">39</span>
+        <span class="count">34</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -447,7 +399,7 @@ paging |
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/passages/paging/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+        <a href="/passages/Mybatis/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
@@ -476,24 +428,6 @@ paging |
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95/" title="基本算法">基本算法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/passages/RabbitMQ/" title="2019-11-15 RabbitMQ">2019-11-15 RabbitMQ</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/passages/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="2019-11-22-微服务">2019-11-22-微服务</a></span>
   </li>
 
@@ -503,7 +437,25 @@ paging |
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/Structure-And-Algorithm/" title="Structure And Algorithm">Structure And Algorithm</a></span>
+    <span><a href="/passages/Mysql/" title="Mysql">Mysql</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Maven/" title="Maven">Maven</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/help-hexo/" title="help-hexo">help-hexo</a></span>
   </li>
 
       
@@ -521,7 +473,37 @@ paging |
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/Move%20House/" title="2023-04-21-要搬家了">2023-04-21-要搬家了</a></span>
+    <span><a href="/passages/JVM/" title="JVM">JVM</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Git/" title="Git">Git</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/index/" title="分类于 index">index</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/index/markdown/" title="分类于 markdown">markdown</a>
+</div>
+
+    <span><a href="/passages/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Ajax/" title="Ajax">Ajax</a></span>
   </li>
 
       
@@ -531,33 +513,6 @@ paging |
 </div>
 
     <span><a href="/passages/filter/" title="filter">filter</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/passages/Springboot/" title="Springboot">Springboot</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/passages/Mybatis/" title="Mybatis">Mybatis</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/passages/Capabilities-OR-Mindset/" title="Capabilities OR Mindset">Capabilities OR Mindset</a></span>
   </li>
 
   </ul>
@@ -582,13 +537,13 @@ paging |
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">70k 字</span>
+    <span title="站点总字数">57k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:03</span>
+    <span title="站点阅读时长">52 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
@@ -602,8 +557,8 @@ paging |
   var LOCAL = {
     path: 'passages/pagehelper/',
     favicon: {
-      show: "（●´3｀●）やれやれだぜ",
-      hide: "(´Д｀)大変だ！"
+      show: "你好",
+      hide: "世界！"
     },
     search : {
       placeholder: "文章搜索",

@@ -76,7 +76,7 @@
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>148</span>
+    <span>734</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/kace-rodriguez-p3OzJuT_Dks-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/lucian-qxO2PBn7eKU-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/andrew-ridley-Kt5hRENuotI-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/v2osk-1Z2niiBPg5A-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/wade-meng-LgCj9qcrfhI-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/roberto-nickson-b1ovoL_F1S8-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/jake-hills-mI02K_LxlfU-unsplash.jpg"></li>
           <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/tyler-lastovich-1755wsQzce8-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/wade-meng-LgCj9qcrfhI-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/andrew-ridley-Kt5hRENuotI-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/michael-olsen-Gs1mJmK2ixc-unsplash.jpg"></li>
         </ul>
       </div>
     </header>
@@ -179,10 +179,92 @@
 </ul>
 <h3 id="常见的使用命令"><a class="markdownIt-Anchor" href="#常见的使用命令">#</a> 常见的使用命令</h3>
 <ol>
-<li>top</li>
+<li>top rm cd cp</li>
 <li>ps 、pstree、 ps -ef|grep java</li>
-<li>free</li>
+<li>free cat chmod ls find</li>
 <li>touch tail</li>
+</ol>
+<h3 id="文件操作"><a class="markdownIt-Anchor" href="#文件操作">#</a> 文件操作</h3>
+<ol>
+<li>创建文件<br>
+ touch 文件名</li>
+<li>删除文件<br>
+ rm 文件名</li>
+<li>移动文件<br>
+ mv 文件名 目标地址</li>
+<li>复制文件<br>
+ cp 文件名 目标地址</li>
+<li>重命名文件<br>
+ mv 文件名 目标地址</li>
+<li>切换目录<br>
+ cd 目录名</li>
+<li>创建目录<br>
+ mkdir 目录名</li>
+<li>删除目录<br>
+ rm -rf 目录名</li>
+<li>切换用户<br>
+ su 用户名</li>
+<li>切换到根目录<br>
+ cd /</li>
+<li>切换到用户目录<br>
+ cd ~</li>
+<li>切换到上一次目录<br>
+ cd -</li>
+</ol>
+<h3 id="查看系统资源"><a class="markdownIt-Anchor" href="#查看系统资源">#</a> 查看系统资源</h3>
+<ol>
+<li>查看 cpu 信息<br>
+ cat /proc/cpuinfo</li>
+<li>查看内存信息<br>
+ cat /proc/meminfo</li>
+<li>查看磁盘信息<br>
+ df -h</li>
+<li>查看网络信息<br>
+ ifconfig</li>
+<li>查看进程信息<br>
+ ps -ef|grep java</li>
+<li>查看端口信息<br>
+ netstat -anp|grep 端口号</li>
+<li>查看系统信息<br>
+ uname -a</li>
+<li>查看系统时间<br>
+ date</li>
+<li>查看系统版本<br>
+ cat /etc/redhat-release</li>
+<li>查看系统内核<br>
+ cat /proc/version</li>
+<li>查看系统加载模块<br>
+ lsmod</li>
+<li>查看系统加载环境变量<br>
+ env</li>
+</ol>
+<h3 id="文件权限"><a class="markdownIt-Anchor" href="#文件权限">#</a> 文件权限</h3>
+<ol>
+<li>查看文件权限<br>
+ ls -l</li>
+<li>修改文件权限<br>
+ chmod 777 文件名</li>
+<li>修改文件所属用户<br>
+ chown 用户名 文件名</li>
+<li>修改文件所属用户组<br>
+ chgrp 用户组 文件名</li>
+</ol>
+<h3 id="文件搜索"><a class="markdownIt-Anchor" href="#文件搜索">#</a> 文件搜索</h3>
+<ol>
+<li>搜索文件<br>
+ find /-name 文件名</li>
+<li>搜索文件内容<br>
+ grep “关键字” 文件名</li>
+<li>搜索文件内容<br>
+ grep -r “关键字” 目录名</li>
+<li>搜索文件大小<br>
+ find /-size +100M</li>
+<li>搜索文件时间<br>
+ find /-mtime +10</li>
+<li>搜索文件类型<br>
+ find /-type d</li>
+<li>搜索文件权限<br>
+ find /-perm 777</li>
 </ol>
 
       <div class="tags">
@@ -206,7 +288,7 @@
       
 <div class="reward">
   <button><i class="ic i-heartbeat"></i> 赞赏</button>
-  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <p>请我喝[咖啡]~(￣▽￣)~*</p>
   <div id="qr">
       
       <div>
@@ -254,7 +336,7 @@
     <div class="item left">
       
 
-  <a href="/passages/SpringCloud/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;zhovy&#x2F;images&#x2F;cristina-gottardi-CSpjU6hYo_0-unsplash.jpg" title="2019-11-25-SpringCloud">
+  <a href="/passages/SpringCloud/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;zhovy&#x2F;images&#x2F;daniel-leone-v7daTKlZzaw-unsplash.jpg" title="2019-11-25-SpringCloud">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>2019-11-25-SpringCloud</h3>
@@ -264,7 +346,7 @@
     <div class="item right">
       
 
-  <a href="/passages/%E7%BC%96%E7%A0%81%E7%B1%BB%E5%9E%8B/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;zhovy&#x2F;images&#x2F;kace-rodriguez-p3OzJuT_Dks-unsplash.jpg" title="2019-12-5-编码类型">
+  <a href="/passages/%E7%BC%96%E7%A0%81%E7%B1%BB%E5%9E%8B/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;zhovy&#x2F;images&#x2F;v2osk-1Z2niiBPg5A-unsplash.jpg" title="2019-12-5-编码类型">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>2019-12-5-编码类型</h3>
@@ -286,7 +368,7 @@
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E9%9D%A2%E6%98%AFlinux%E7%B3%BB%E7%BB%9F%E5%AE%9A%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E6%96%87%E4%BB%B6%E9%BB%98%E8%AE%A4%E7%9A%84%E9%A2%9C%E8%89%B2"><span class="toc-number">1.</span> <span class="toc-text"> 下面是 Linux 系统定不同类型文件默认的颜色：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text"> 常见的使用命令</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E9%9D%A2%E6%98%AFlinux%E7%B3%BB%E7%BB%9F%E5%AE%9A%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E6%96%87%E4%BB%B6%E9%BB%98%E8%AE%A4%E7%9A%84%E9%A2%9C%E8%89%B2"><span class="toc-number">1.</span> <span class="toc-text"> 下面是 Linux 系统定不同类型文件默认的颜色：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text"> 常见的使用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">3.</span> <span class="toc-text"> 文件操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E8%B5%84%E6%BA%90"><span class="toc-number">4.</span> <span class="toc-text"> 查看系统资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90"><span class="toc-number">5.</span> <span class="toc-text"> 文件权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2"><span class="toc-number">6.</span> <span class="toc-text"> 文件搜索</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -301,7 +383,7 @@
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">36</span>
+        <span class="count">30</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -313,7 +395,7 @@
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">39</span>
+        <span class="count">34</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -409,7 +491,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/Maven/" title="Maven">Maven</a></span>
+    <span><a href="/passages/QuickBI/" title="QuickBI">QuickBI</a></span>
   </li>
 
       
@@ -418,7 +500,19 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/Move%20House/" title="2023-04-21-要搬家了">2023-04-21-要搬家了</a></span>
+    <span><a href="/passages/Mybatis/" title="Mybatis">Mybatis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/index/" title="分类于 index">index</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/index/markdown/" title="分类于 markdown">markdown</a>
+</div>
+
+    <span><a href="/passages/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
       
@@ -436,7 +530,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/JVM/" title="JVM">JVM</a></span>
+    <span><a href="/passages/Listner/" title="Listener">Listener</a></span>
   </li>
 
       
@@ -445,7 +539,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/%E7%BC%96%E7%A0%81%E7%B1%BB%E5%9E%8B/" title="2019-12-5-编码类型">2019-12-5-编码类型</a></span>
+    <span><a href="/passages/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="2019-12-5-Linux常用指令">2019-12-5-Linux常用指令</a></span>
   </li>
 
       
@@ -454,34 +548,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/JSTL/" title="JSTL">JSTL</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/passages/QuickBI/" title="QuickBI">QuickBI</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/passages/Git/" title="Git">Git</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/passages/filter/" title="filter">filter</a></span>
+    <span><a href="/passages/Maven/" title="Maven">Maven</a></span>
   </li>
 
       
@@ -491,6 +558,24 @@
 </div>
 
     <span><a href="/passages/RabbitMQ/" title="2019-11-15 RabbitMQ">2019-11-15 RabbitMQ</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/help-hexo/" title="help-hexo">help-hexo</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/pagehelper/" title="paging">paging</a></span>
   </li>
 
   </ul>
@@ -515,13 +600,13 @@
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">70k 字</span>
+    <span title="站点总字数">57k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:03</span>
+    <span title="站点阅读时长">52 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
@@ -535,8 +620,8 @@
   var LOCAL = {
     path: 'passages/Linux常用指令/',
     favicon: {
-      show: "（●´3｀●）やれやれだぜ",
-      hide: "(´Д｀)大変だ！"
+      show: "你好",
+      hide: "世界！"
     },
     search : {
       placeholder: "文章搜索",

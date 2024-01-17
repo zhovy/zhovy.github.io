@@ -76,7 +76,7 @@ My Jsp |
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>3.4k</span>
+    <span>2.8k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@ My Jsp |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/jake-hills-mI02K_LxlfU-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/daniel-leone-v7daTKlZzaw-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/jordan-whitt-qGQNmBE7mYw-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/michael-olsen-Gs1mJmK2ixc-unsplash.jpg"></li>
-          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/ryo-yoshitake-Fim4XEASDZc-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/tyler-lastovich-1755wsQzce8-unsplash.jpg"></li>
           <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/lucian-qxO2PBn7eKU-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/cristina-gottardi-CSpjU6hYo_0-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/martin-jernberg-qie9wa-YLK8-unsplash.jpg"></li>
+          <li class="item" data-background-image="https://cdn.jsdelivr.net/gh/zhovy/images/mohammad-alizade-4wzRuAb-KWs-unsplash.jpg"></li>
         </ul>
       </div>
     </header>
@@ -166,27 +166,23 @@ My Jsp |
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="架构"><a class="markdownIt-Anchor" href="#架构">#</a> 架构：</h1>
-<p>BS：Browser/Server<br>
+    <h1 id="前后端技术架构"><a class="markdownIt-Anchor" href="#前后端技术架构">#</a> 前后端技术架构：</h1>
+<p>包括但不限于常用技术栈 web 端 服务端 移动端 架构等等<br>
+ BS：Browser/Server<br>
 CS: Client/Server// 如果软件升级，那么全部的客户端都要升级 每一台客户端都需要安装软件</p>
-<h1 id="常见的状态码"><a class="markdownIt-Anchor" href="#常见的状态码">#</a> 常见的状态码：</h1>
+<h1 id="常见的http状态码"><a class="markdownIt-Anchor" href="#常见的http状态码">#</a> 常见的<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvSFRUUCVFNyU4QSVCNiVFNiU4MCU4MSVFNyVBMCU4MQ=="> HTTP 状态码：</span></h1>
 <p>404：资源不存在<br>
  403：权限不足<br>
  200：一切正常<br>
  300：页面重定向<br>
  500：内部错误（代码写错了）</p>
-<h1 id="两种配置项目路径的方式"><a class="markdownIt-Anchor" href="#两种配置项目路径的方式">#</a> 两种配置项目路径的方式</h1>
-<p>a. 将项目配置到 web 以外的目录<br>
-在 conf/server.xml 文件中配置<br>
-<Context  docBase = "D:\study\JspProject" path = "/JspProject"><br>
-//path 相当于 webapps (重启)<br>
- b.C:\Program Files\Apache SoftwareFoundation\Tomcat8.5\conf\Catalina\localhost 中新建 “项目名.xml” 新增一行：<br>
-<Context  docBase = "E:\JspProject" path = "/JspProject"></p>
 <h1 id="虚拟主机"><a class="markdownIt-Anchor" href="#虚拟主机">#</a> 虚拟主机</h1>
 <figure class="highlight xml"><figcaption data-lang="XML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Engine</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Catalina<span class="token punctuation">"</span></span> <span class="token attr-name">defaultHost</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>www.test.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Host</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>www.test.com<span class="token punctuation">"</span></span> <span class="token attr-name">appBase</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>E:\JspProject<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="3"></td><td><pre>		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Context</span> <span class="token attr-name">docBean</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>E:\JspProject<span class="token punctuation">"</span></span> <span class="token attr-name">parh</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="4"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Host</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Engine</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><p>修改本机的 Host</p>
 <h1 id="配置tomcat"><a class="markdownIt-Anchor" href="#配置tomcat">#</a> 配置 Tomcat</h1>
-<p>a. 将 tomcat/lib 中的 servlet-api.jac 加入项目的构建路径<br>
- b. 右键项目 -&gt;Build Path -&gt;Add Library -&gt;Server Runtime</p>
+<ul>
+<li>a. 将 tomcat/lib 中的 servlet-api.jac 加入项目的构建路径</li>
+<li>b. 右键项目 -&gt;Build Path -&gt;Add Library -&gt;Server Runtime</li>
+</ul>
 <h1 id="统一编码字符集"><a class="markdownIt-Anchor" href="#统一编码字符集">#</a> 统一编码字符集</h1>
 <h5 id="编码分类"><a class="markdownIt-Anchor" href="#编码分类">#</a> 编码分类：</h5>
 <p>设置 Jsp 文件的编码（jsp 文件中的 PageEncoding 属性）：jsp-&gt;java<br>
@@ -198,9 +194,11 @@ CS: Client/Server// 如果软件升级，那么全部的客户端都要升级 �
 设置单独的文件编码</p>
 <p>jsp 元素：脚本 Scriplet  注释  指令</p>
 <h5 id="脚本scriplet"><a class="markdownIt-Anchor" href="#脚本scriplet">#</a> 脚本 Scriplet</h5>
-<p>i:   &lt;%   局部变量 java 语句 %&gt;<br>
-ii：&lt;!%  全局变量，定义方法  %&gt;<br>
-iii:  &lt;%= 输出表达式 %&gt;</p>
+<ul>
+<li>i:   &lt;%   局部变量 java 语句 %&gt;</li>
+<li>ii：&lt;!%  全局变量，定义方法  %&gt;</li>
+<li>iii:  &lt;%= 输出表达式 %&gt;</li>
+</ul>
 <p>一般而言修改 web.xml 配置文件需要重启 tomcat<br>
  但是如果修改 Jsp/<br>
  注意 out.println （）不能回车；</p>
@@ -232,32 +230,14 @@ String [] getParameterValues (String name): 根据请求的字段名 KEY，返�
 void setCharacterEncoding (“编码格式 UTF-8”): 设置（post）请求编码（tomcat7 以前默认的是 iso-8859-1,tomvat8 以后的是 UTF-8）<br>
 getRequestDispatcher (“b.jsp”).forward (request,response);: 请求转发的方式跳转页面 A-&gt;B<br>
 ServletContext getServerContext ()：获取项目的 ServletContext 对象</p>
-<h1 id="get与post的区别"><a class="markdownIt-Anchor" href="#get与post的区别">#</a> get 与 post 的区别：</h1>
-<p>a.get 请求方式会在地址栏里显示请求信息（但是容量有限 4-5kb, 如果是请求数据存在大文件推荐使用 POST）<br>
-b. 文件上传操作必须是 Post<br>
-11. 统一请求的编码 request</p>
-<h5 id="get"><a class="markdownIt-Anchor" href="#get">#</a> get</h5>
-<p>方式请求  如果出现乱码，解决：<br>
-a. 统一每一个变量的编码：<br>
-new String (旧编码，新编码);<br>
-tomcat7 (iso-8859-1)<br>
-tomcat8 (utf-8）<br>
-b. 修改 server.xml 一次性的 更改 tomcat 的编码格式 URIEncoding=“UTF-8”<br>
- 建议使用 tomcat 时首先在 server.xml 文件中修改</p>
-<h5 id="post"><a class="markdownIt-Anchor" href="#post">#</a> post</h5>
-<p>request.setCharacterEncoding(“uft-8”);<br>
-Cookie :name = value<br>
-javax.servlet.http.Cookie 产生的 Cookie<br>
-public Cookie(String name, String value)<br>
- String name: 获取 name<br>
-String value：获取 value<br>
-void setMaxAge (int expiry) : 设置最大的有效期</p>
 <h1 id="服务端准备cookie"><a class="markdownIt-Anchor" href="#服务端准备cookie">#</a> 服务端准备 Cookie:</h1>
 <p>response.addCookie(Cookie cookie)<br>
  页面跳转 有两种方式（页面转发，重定向）<br>
-客户端获取 cookie:request.getCookies ();<br>
-a. 服务端增加 Cookie :response 对象   客户端获取对象：request 对象<br>
- b. 不能直接获取某一个单独对象，只能一次将全部的 Cookie 拿到 然后遍历 全部的 Cookie  根据名字可以 可以拿到相应的 value</p>
+客户端获取 cookie:request.getCookies ();</p>
+<ul>
+<li>a. 服务端增加 Cookie :response 对象   客户端获取对象：request 对象</li>
+<li>b. 不能直接获取某一个单独对象，只能一次将全部的 Cookie 拿到 然后遍历 全部的 Cookie  根据名字可以 可以拿到相应的 value</li>
+</ul>
 <h1 id="session"><a class="markdownIt-Anchor" href="#session">#</a> Session</h1>
 <p>session (会话–是服务端产生的用于和客户端之间建立一一对应的关系，)<br>
  session 机制：<br>
@@ -323,7 +303,7 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
       
 <div class="reward">
   <button><i class="ic i-heartbeat"></i> 赞赏</button>
-  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <p>请我喝[咖啡]~(￣▽￣)~*</p>
   <div id="qr">
       
       <div>
@@ -373,10 +353,10 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
     <div class="item right">
       
 
-  <a href="/passages/My-New-Post/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;zhovy&#x2F;images&#x2F;mohammad-alizade-4wzRuAb-KWs-unsplash.jpg" title="My Jsp">
+  <a href="/passages/jdbc/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;zhovy&#x2F;images&#x2F;mohammad-alizade-4wzRuAb-KWs-unsplash.jpg" title="jdbc">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>My Jsp</h3>
+  <h3>jdbc</h3>
   </a>
 
     </div>
@@ -395,7 +375,7 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9E%B6%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text"> 架构：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text"> 常见的状态码：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9B%AE%E8%B7%AF%E5%BE%84%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text"> 两种配置项目路径的方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA"><span class="toc-number">4.</span> <span class="toc-text"> 虚拟主机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEtomcat"><span class="toc-number">5.</span> <span class="toc-text"> 配置 Tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%9F%E4%B8%80%E7%BC%96%E7%A0%81%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-number">6.</span> <span class="toc-text"> 统一编码字符集</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%96%E7%A0%81%E5%88%86%E7%B1%BB"><span class="toc-number">6.0.0.0.1.</span> <span class="toc-text"> 编码分类：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%BC%96%E7%A0%81"><span class="toc-number">6.0.0.0.2.</span> <span class="toc-text"> 文本编码：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%84%9A%E6%9C%ACscriplet"><span class="toc-number">6.0.0.0.3.</span> <span class="toc-text"> 脚本 Scriplet</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4"><span class="toc-number">6.0.0.0.4.</span> <span class="toc-text"> 指令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">6.0.0.0.5.</span> <span class="toc-text"> 注释</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jsp%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1"><span class="toc-number">7.</span> <span class="toc-text"> Jsp 内置对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#request%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95"><span class="toc-number">8.</span> <span class="toc-text"> request 对象的常见方法：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#get%E4%B8%8Epost%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">9.</span> <span class="toc-text"> get 与 post 的区别：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#get"><span class="toc-number">9.0.0.0.1.</span> <span class="toc-text"> get</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#post"><span class="toc-number">9.0.0.0.2.</span> <span class="toc-text"> post</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%87%86%E5%A4%87cookie"><span class="toc-number">10.</span> <span class="toc-text"> 服务端准备 Cookie:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#session"><span class="toc-number">11.</span> <span class="toc-text"> Session</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#sessionid"><span class="toc-number">11.0.0.0.1.</span> <span class="toc-text"> Sessionid</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#session%E6%B3%A8%E9%94%80"><span class="toc-number">11.0.0.0.2.</span> <span class="toc-text"> Session 注销</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cookie-%E5%92%8C-session%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">12.</span> <span class="toc-text"> cookie 和 session 的区别：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#application%E5%85%A8%E5%B1%80%E5%AF%B9%E8%B1%A1"><span class="toc-number">13.</span> <span class="toc-text"> application 全局对象</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text"> 前后端技术架构：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84http%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text"> 常见的 HTTP 状态码：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA"><span class="toc-number">3.</span> <span class="toc-text"> 虚拟主机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEtomcat"><span class="toc-number">4.</span> <span class="toc-text"> 配置 Tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%9F%E4%B8%80%E7%BC%96%E7%A0%81%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-number">5.</span> <span class="toc-text"> 统一编码字符集</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%96%E7%A0%81%E5%88%86%E7%B1%BB"><span class="toc-number">5.0.0.0.1.</span> <span class="toc-text"> 编码分类：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%BC%96%E7%A0%81"><span class="toc-number">5.0.0.0.2.</span> <span class="toc-text"> 文本编码：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%84%9A%E6%9C%ACscriplet"><span class="toc-number">5.0.0.0.3.</span> <span class="toc-text"> 脚本 Scriplet</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4"><span class="toc-number">5.0.0.0.4.</span> <span class="toc-text"> 指令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">5.0.0.0.5.</span> <span class="toc-text"> 注释</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jsp%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1"><span class="toc-number">6.</span> <span class="toc-text"> Jsp 内置对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#request%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95"><span class="toc-number">7.</span> <span class="toc-text"> request 对象的常见方法：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%87%86%E5%A4%87cookie"><span class="toc-number">8.</span> <span class="toc-text"> 服务端准备 Cookie:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#session"><span class="toc-number">9.</span> <span class="toc-text"> Session</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#sessionid"><span class="toc-number">9.0.0.0.1.</span> <span class="toc-text"> Sessionid</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#session%E6%B3%A8%E9%94%80"><span class="toc-number">9.0.0.0.2.</span> <span class="toc-text"> Session 注销</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cookie-%E5%92%8C-session%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">10.</span> <span class="toc-text"> cookie 和 session 的区别：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#application%E5%85%A8%E5%B1%80%E5%AF%B9%E8%B1%A1"><span class="toc-number">11.</span> <span class="toc-text"> application 全局对象</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -410,7 +390,7 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">36</span>
+        <span class="count">30</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -422,7 +402,7 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">39</span>
+        <span class="count">34</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -516,7 +496,7 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/JSTL/" title="JSTL">JSTL</a></span>
+    <span><a href="/passages/Expression-Language/" title="Expression Language">Expression Language</a></span>
   </li>
 
       
@@ -525,7 +505,7 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/paging/" title="paging">paging</a></span>
+    <span><a href="/passages/SpringMVC/" title="SpringMVC">SpringMVC</a></span>
   </li>
 
       
@@ -534,16 +514,7 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/JVM/" title="JVM">JVM</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/passages/Capabilities-OR-Mindset/" title="Capabilities OR Mindset">Capabilities OR Mindset</a></span>
+    <span><a href="/passages/%E9%9D%A2%E8%AF%95/" title="My Jsp">My Jsp</a></span>
   </li>
 
       
@@ -559,12 +530,9 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/index/" title="分类于 index">index</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/index/markdown/" title="分类于 markdown">markdown</a>
 </div>
 
-    <span><a href="/passages/hello-world/" title="Hello World">Hello World</a></span>
+    <span><a href="/passages/Maven/" title="Maven">Maven</a></span>
   </li>
 
       
@@ -573,16 +541,7 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="2019-12-5-Linux常用指令">2019-12-5-Linux常用指令</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/passages/Springboot/" title="Springboot">Springboot</a></span>
+    <span><a href="/passages/MybatisPlus/" title="MybatisPlus">MybatisPlus</a></span>
   </li>
 
       
@@ -600,7 +559,25 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/passages/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="2019-11-22-微服务">2019-11-22-微服务</a></span>
+    <span><a href="/passages/%E5%B1%B1%E4%B8%9C-%E6%B7%84%E5%8D%9A/" title="山东-淄博">山东-淄博</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/Redis/" title="Redis">Redis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/passages/RabbitMQ/" title="2019-11-15 RabbitMQ">2019-11-15 RabbitMQ</a></span>
   </li>
 
   </ul>
@@ -625,13 +602,13 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">70k 字</span>
+    <span title="站点总字数">57k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:03</span>
+    <span title="站点阅读时长">52 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
@@ -645,8 +622,8 @@ application  整个项目运行期间都有效（关闭服务器，其他项目�
   var LOCAL = {
     path: 'passages/面试/',
     favicon: {
-      show: "（●´3｀●）やれやれだぜ",
-      hide: "(´Д｀)大変だ！"
+      show: "你好",
+      hide: "世界！"
     },
     search : {
       placeholder: "文章搜索",
